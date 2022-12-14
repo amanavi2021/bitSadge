@@ -2,6 +2,7 @@
   @media screen and (min-width: $desctop) {
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 120px;
     width: 330px;
 
     font-weight: 800;
@@ -15,6 +16,9 @@
 
   &--size {
     @media screen and (min-width: $desctop) {
+      display: block;
+      margin-top: 12px;
+
       font-weight: 400;
       font-size: 36px;
       line-height: 1.25;
