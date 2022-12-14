@@ -1,2 +1,14 @@
+// utils styles
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+// base styles
 @import './common';
+@import "./base/base";
+
+//example
+
 @import './example';
+
+//index.html
+@import './header';
+@import "./products";

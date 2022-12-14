@@ -1,0 +1,34 @@
+body {
+    // font-family: $mainFont;
+     font-size: 14px;
+     letter-spacing: 0.03em;
+    // color: $mainColor;
+    // background-color: $mainTitleColor;
+}
+
+// reset styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+// responsive images
+img {
+    display:block;
+    max-width: 100%;
+    height: auto;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.link {
+    text-decoration: none;
+}
