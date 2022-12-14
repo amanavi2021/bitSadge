@@ -45,6 +45,7 @@ body {
     h6,
     p {
         margin: 0;
+        padding: 0;
     }
 
     // responsive images
@@ -54,12 +55,12 @@ body {
         height: auto;
     }
 
-    .list {
+    ul {
         list-style: none;
         margin: 0;
         padding: 0;
     }
 
-    .link {
+    a {
         text-decoration: none;
     }
