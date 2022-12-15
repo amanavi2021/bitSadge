@@ -1,28 +1,196 @@
+.products {
+  // mobile screen
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-image: url(../images/common/backgroud_s@1x.jpg);
+
+  // // mobile screen retina
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/common/backgroud_s@2x.jpg);
+  }
+
+  // tablet screen
+  @media screen and (min-width: calc($mobile + 1px)) {
+    background-image: url(../images/common/backgroud_m@1x.jpg);
+
+    // tablet screen retina
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/common/backgroud_m@2x.jpg);
+    }
+  }
+
+  // desctop screen
+  @media screen and (min-width: calc($tablet + 1px)) {
+    background-image: url(../images/common/backgroud_l@1x.jpg);
+
+    // desctop screen retina
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/common/backgroud_l@2x.jpg);
+    }
+  }
+}
+
+// --------------------------------
+// --------Стилі заголовка---------
+// --------------------------------
 .products__title {
-  @media screen and (min-width: $desctop) {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 800;
+  line-height: 1.23;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $secondaryColor;
+
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 270px;
+
+    font-size: 18px;
+    line-height: 1.22;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 80px;
+    width: 306px;
+
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 303px;
     width: 330px;
 
-    font-weight: 800;
     font-size: 30px;
-    line-height: 1.23;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: #131313;
   }
 
   &--size {
-    @media screen and (min-width: $desctop) {
-      display: block;
-      margin-top: 12px;
+    display: block;
+    margin-top: 12px;
 
-      font-weight: 400;
+    font-family: $secondaryFont;
+
+    @media screen and (max-width: 767.98px) {
+      font-size: 30px;
+      line-height: 1.27;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 34px;
+      line-height: 1.26;
+    }
+
+    @media screen and (min-width: $desktop) {
       font-size: 36px;
       line-height: 1.25;
       letter-spacing: 0.06em;
     }
   }
+}
+
+// -------------------------------------
+// ----------Стилі карток---------------
+// -------------------------------------
+.products__list {
+  display: flex;
+  gap: 29px;
+}
+
+.products__item {
+  position: relative;
+
+  padding-top: 165px;
+  padding-right: 64px;
+  padding-bottom: 60px;
+  padding-left: 64px;
+
+  flex-basis: calc((100% - 29px * 2) / 3);
+
+  background-color: #aec6a5;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  &--second {
+    background-color: #efd478;
+  }
+
+  &--third {
+    background-color: #d6936d;
+  }
+}
+
+.products__shadow-wrapper {
+  position: absolute;
+  top: -35%;
+  left: 34px;
+
+  display: inline-block;
+
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+  border-radius: 150px;
+
+  &--second {
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+  }
+
+  &--third {
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.products__img-wrapper {
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  border-radius: 150px;
+}
+
+.products__subtitle {
+  margin-bottom: 66px;
+
+  font-size: 30px;
+  line-height: 1.23;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $secondaryColor;
+}
+
+.products__text {
+  margin-bottom: 50px;
+  height: 142px;
+
+  font-size: 16px;
+  line-height: 1.76;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $secondaryColor;
 }
