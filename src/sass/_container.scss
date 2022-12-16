@@ -1,18 +1,22 @@
-.container {
+  .container {
     margin-left: auto;
     margin-right: auto;
-    padding-left: 16px;
-    padding-right: 16px;
-  
-    @media screen and (max-width: calc($tablet - 1px)) {
+    
+    @media screen and (max-width: calc($tablet - 0.02px)) {
       max-width: 480px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   
     @media screen and (min-width: $tablet) {
       width: 768px;
+      padding-left: 32px;
+      padding-right: 32px;
     }
   
     @media screen and (min-width: $desktop) {
       width: 1200px;
+      padding-left: 16px;
+      padding-right: 16px;
     }
   }
