@@ -22,11 +22,26 @@
 
     &--large{
     width: 196px;    
+    margin-left: auto;
+    margin-right: auto;
+
+    //tablet
+    @media screen and (min-width: $tablet) {
+        margin: 0;
+    }
         }
+
+  
 
     &--green{
     background-color: $bgGreenColor;
     border-color: $accentColor;
+    margin-top: 16px;
+
+     //tablet
+     @media screen and (min-width: $tablet) {
+        margin: 0;
+    }
     }
 
     &:hover,
