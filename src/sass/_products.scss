@@ -3,6 +3,9 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  // background-position: center;
+  background-size: contain;
+  // background-repeat: no-repeat;
   background-image: url(../images/common/backgroud_s@1x.jpg);
 
   // // mobile screen retina
@@ -14,6 +17,9 @@
 
   // tablet screen
   @media screen and (min-width: $tablet) {
+    // background-position: center;
+    background-size: contain;
+    // background-repeat: no-repeat;
     background-image: url(../images/common/backgroud_m@1x.jpg);
 
     // tablet screen retina
@@ -26,6 +32,9 @@
 
   // desktop screen
   @media screen and (min-width: $desktop) {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url(../images/common/backgroud_l@1x.jpg);
 
     // desktop screen retina
@@ -38,7 +47,7 @@
 }
 
 // --------------------------------
-// --------Стилі заголовка---------
+// --------Стилі заголовка--------- ГОТОВІ
 // --------------------------------
 .products__label {
   display: block;
@@ -54,22 +63,15 @@
   color: $secondaryColor;
 
   @media screen and (max-width: 767.98px) {
-    width: 100%;
-    max-width: 270px;
-
     font-size: 18px;
     line-height: 1.22;
   }
 
   @media screen and (min-width: $tablet) {
-    width: 306px;
-
     font-size: 22px;
   }
 
   @media screen and (min-width: $desktop) {
-    width: 330px;
-
     font-size: 30px;
   }
 }
@@ -104,98 +106,209 @@
 }
 
 // -------------------------------------
-// ----------Стилі карток---------------
+// ----------Стилі карток--------------- ГОТОВІ
 // -------------------------------------
 .products__list {
-  display: flex;
-  gap: 29px;
-}
+  @media screen and (max-width: calc($tablet - 0.02px)) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 280px;
+  }
 
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 29px;
+  }
+}
+// ------------РОЗДІЛИДИ І ДОРОБИТИ АДАПТИВКУ-------------------
 .products__item {
   position: relative;
 
-  padding-top: 165px;
-  padding-right: 64px;
-  padding-bottom: 60px;
-  padding-left: 64px;
+  @media screen and (max-width: calc($tablet - 0.02px)) {
+    // padding-top: 165px;
+    // padding-bottom: 60px;
+    // padding-left: 64px;
+    // padding-right: 64px;
 
-  flex-basis: calc((100% - 29px * 2) / 3);
+    // background-color: #aec6a5;
+    // box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    // border-radius: 24px;
+  }
 
-  background-color: #aec6a5;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  border-radius: 24px;
+  @media screen and (min-width: $tablet) {
+    // padding-top: 165px;
+    // padding-bottom: 60px;
+    // padding-left: 64px;
+    // padding-right: 64px;
+
+    // background-color: #aec6a5;
+    // box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    // border-radius: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 165px;
+    padding-bottom: 60px;
+    padding-left: 64px;
+    padding-right: 64px;
+
+    background-color: #aec6a5;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -188px;
+    left: 4px;
+
+    display: block;
+    width: 362px;
+    height: 362px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/products/img1_200.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/img1_400.png);
+    }
+
+    @media screen and (min-width: $desktop) {
+      background-image: url(../images/products/img1_302.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/img1_604.png);
+      }
+    }
+  }
 
   &--second {
     background-color: #efd478;
+
+    &::before {
+      background-image: url(../images/products/img2_200.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/img2_400.png);
+      }
+
+      @media screen and (min-width: $desktop) {
+        background-image: url(../images/products/img2_302.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+          background-image: url(../images/products/img2_604.png);
+        }
+      }
+    }
   }
 
   &--third {
     background-color: #d6936d;
+
+    &::before {
+      background-image: url(../images/products/img3_200.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/img3_400.png);
+      }
+
+      @media screen and (min-width: $desktop) {
+        background-image: url(../images/products/img3_302.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+          background-image: url(../images/products/img3_604.png);
+        }
+      }
+    }
   }
 }
 
-.products__shadow-wrapper {
-  position: absolute;
-  top: -35%;
-  left: 34px;
-
-  display: inline-block;
-
-  background: linear-gradient(
-      0deg,
-      rgba(156, 190, 143, 0.7),
-      rgba(156, 190, 143, 0.7)
-    ),
-    #d9d9d9;
-  box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
-  border-radius: 150px;
-
-  &--second {
-    background: linear-gradient(
-        0deg,
-        rgba(248, 210, 78, 0.7),
-        rgba(248, 210, 78, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
-  }
-
-  &--third {
-    background: linear-gradient(
-        0deg,
-        rgba(213, 117, 63, 0.7),
-        rgba(213, 117, 63, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
-  }
-}
-
-.products__img-wrapper {
-  margin-bottom: 16px;
-  overflow: hidden;
-
-  border-radius: 150px;
-}
-
+// ------------------------------------
+// ---------Стилі тексту картки-------- ГОТОВІ
+// ------------------------------------
 .products__subtitle {
-  margin-bottom: 66px;
+  margin-bottom: 40px;
 
-  font-size: 30px;
-  line-height: 1.23;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $secondaryColor;
+
+  @media screen and (max-width: calc($tablet - 0.02px)) {
+    font-size: 20px;
+    line-height: 1.2px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 1.23;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 66px;
+
+    font-size: 30px;
+  }
 }
 
 .products__text {
-  margin-bottom: 50px;
-  height: 142px;
-
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.76;
   text-align: center;
   letter-spacing: 0.04em;
   color: $secondaryColor;
+
+  @media screen and (max-width: calc($tablet - 0.02px)) {
+    margin-bottom: 53px;
+    height: 148px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 50px;
+    height: 175px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    height: 142px;
+
+    font-size: 16px;
+  }
+}
+
+.products__button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40px;
+  height: 16px;
+
+  cursor: pointer;
+
+  background-color: tomato;
+  border: none;
 }
