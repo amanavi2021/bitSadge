@@ -1,0 +1,220 @@
+.footer {
+    background-color: $bgGreenColor;
+    
+    &__btn {
+
+            //tablet
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
+
+    &__text {
+    margin-top: 60px;
+        
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 /18);
+    text-transform: uppercase;
+    color: $mainColor;
+
+    @media screen and (max-width: 767.98px) {
+        
+        width: 100%;
+        max-width: 232px;
+    }
+
+    //tablet
+    @media screen and (min-width: $tablet) {
+        font-size: 26px;
+        letter-spacing: 0.04em;
+        margin-top: 40px;
+        max-width: 352px;
+    }
+
+    //desktop
+
+    @media screen and (min-width: $desktop) {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: calc(37 / 30);
+        letter-spacing: 0.04em;
+
+        margin-top: 120px;
+
+        max-width: 504px;
+    }
+
+        &--large {
+        display: block;
+        margin-top: 16px;
+
+        font-weight: 700;
+        font-size: 34px;
+        line-height: calc(41 / 34);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $mainColor;
+
+        @media screen and (max-width: 767.98px) {
+        
+            width: 100%;
+            max-width: 200px;
+        }
+
+        //tablet
+        @media screen and (min-width: $tablet) {
+            font-size: 48px;
+            letter-spacing: 0.06em;
+            margin-top: 8px;
+            
+        }
+
+        //desktop
+
+        @media screen and (min-width: $desktop) {
+            font-size: 58px;
+            margin-top: 14px;
+            
+        }
+    }
+    }
+
+    &__wrapper {
+
+        //tablet
+
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        }
+
+      
+    }
+
+    &__contact {
+
+        margin-top: 20px;
+        margin-right: 20px;
+        
+        font-weight: 700;
+        font-size: 12px;
+        line-height: calc(22 / 12);
+        text-align: right;
+        color: $secondaryColor;
+
+        //tablet
+
+        @media screen and (min-width: $tablet) {
+            position: absolute;
+            top: 211px;
+            right: 15px;
+            margin-top: 0;
+            
+        }
+
+        @media screen and (min-width: $desktop) {
+            top: 257px;
+            right: 15px;
+            margin: 0;
+        }
+
+    }
+
+    &__tel {
+    display: inline-block;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+    text-align: right;
+    color: $mainColor;
+    }
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    margin-top: 60px;
+    margin-right: 20px;
+
+   //tablet
+
+   @media screen and (min-width: $tablet) {
+    margin-top: 60px;
+    
+   }
+
+   @media screen and (min-width: $desktop) {
+         margin-top: 80;
+         margin-right: 0; 
+            
+   }
+
+    &__link {
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: $accentColor;
+        text-align: center;
+    }
+}
+ 
+
+
+.footer__rule {
+    max-width: 100%;
+  
+    height: 1px;
+    color:#E1E1E1;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    //tablet
+@media screen and (min-width: $tablet) {
+    
+    margin-bottom: 12px;
+    
+}
+}
+
+.footer__copyright {
+
+font-weight: 700;
+font-size: 14px;
+line-height: calc(21 / 14);
+text-align: center;
+color: #7A7A7A;
+
+padding-bottom: 20px;
+
+margin-left: auto;
+margin-right:auto;
+
+@media screen and (max-width: 767.98px) {
+        
+    width: 100%;
+    max-width: 150px;
+}
+//tablet
+@media screen and (min-width: $tablet) {
+    
+    padding-bottom: 12px;
+    
+}
+}
+
+.container--footer {
+    position: relative;
+}
