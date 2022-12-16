@@ -3,43 +3,43 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  background-size: contain;
-  background-image: url(../images/common/backgroud_s@1x.jpg);
+  // background-size: contain;
+  // background-image: url(../images/common/backgroud_s@1x.jpg);
 
-  // // mobile screen retina
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url(../images/common/backgroud_s@2x.jpg);
-  }
+  // // // mobile screen retina
+  // @media screen and (min-device-pixel-ratio: 2),
+  //   screen and (min-resolution: 192dpi),
+  //   screen and (min-resolution: 2dppx) {
+  //   background-image: url(../images/common/backgroud_s@2x.jpg);
+  // }
 
-  // tablet screen
-  @media screen and (min-width: $tablet) {
-    background-size: contain;
-    background-image: url(../images/common/backgroud_m@1x.jpg);
+  // // tablet screen
+  // @media screen and (min-width: $tablet) {
+  //   background-size: contain;
+  //   background-image: url(../images/common/backgroud_m@1x.jpg);
 
-    // tablet screen retina
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../images/common/backgroud_m@2x.jpg);
-    }
-  }
+  //   // tablet screen retina
+  //   @media screen and (min-device-pixel-ratio: 2),
+  //     screen and (min-resolution: 192dpi),
+  //     screen and (min-resolution: 2dppx) {
+  //     background-image: url(../images/common/backgroud_m@2x.jpg);
+  //   }
+  // }
 
-  // desktop screen
-  @media screen and (min-width: $desktop) {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../images/common/backgroud_l@1x.jpg);
+  // // desktop screen
+  // @media screen and (min-width: $desktop) {
+  //   background-position: center;
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-image: url(../images/common/backgroud_l@1x.jpg);
 
-    // desktop screen retina
-    @media screen and (min-device-pixel-ratio: 2),
-      screen and (min-resolution: 192dpi),
-      screen and (min-resolution: 2dppx) {
-      background-image: url(../images/common/backgroud_l@2x.jpg);
-    }
-  }
+  //   // desktop screen retina
+  //   @media screen and (min-device-pixel-ratio: 2),
+  //     screen and (min-resolution: 192dpi),
+  //     screen and (min-resolution: 2dppx) {
+  //     background-image: url(../images/common/backgroud_l@2x.jpg);
+  //   }
+  // }
 }
 
 // --------------------------------
