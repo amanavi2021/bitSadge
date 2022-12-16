@@ -3,6 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  background-size: contain;
   background-image: url(../images/common/backgroud_s@1x.jpg);
 
   // // mobile screen retina
@@ -13,7 +14,8 @@
   }
 
   // tablet screen
-  @media screen and (min-width: calc($mobile + 1px)) {
+  @media screen and (min-width: $tablet) {
+    background-size: contain;
     background-image: url(../images/common/backgroud_m@1x.jpg);
 
     // tablet screen retina
@@ -24,11 +26,14 @@
     }
   }
 
-  // desctop screen
-  @media screen and (min-width: calc($tablet + 1px)) {
+  // desktop screen
+  @media screen and (min-width: $desktop) {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url(../images/common/backgroud_l@1x.jpg);
 
-    // desctop screen retina
+    // desktop screen retina
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
@@ -38,11 +43,13 @@
 }
 
 // --------------------------------
-// --------Стилі заголовка---------
+// --------Стилі заголовка--------- ГОТОВО
 // --------------------------------
-.products__title {
+.products__label {
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 12px;
 
   font-weight: 800;
   line-height: 1.23;
@@ -52,145 +59,280 @@
   color: $secondaryColor;
 
   @media screen and (max-width: 767.98px) {
-    margin-bottom: 40px;
-    width: 100%;
-    max-width: 270px;
-
     font-size: 18px;
     line-height: 1.22;
   }
 
   @media screen and (min-width: $tablet) {
-    margin-bottom: 80px;
-    width: 306px;
-
     font-size: 22px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-bottom: 303px;
-    width: 330px;
-
     font-size: 30px;
   }
-
-  &--size {
-    display: block;
-    margin-top: 12px;
-
-    font-family: $secondaryFont;
-
-    @media screen and (max-width: 767.98px) {
-      font-size: 30px;
-      line-height: 1.27;
-    }
-
-    @media screen and (min-width: $tablet) {
-      font-size: 34px;
-      line-height: 1.26;
-    }
-
-    @media screen and (min-width: $desktop) {
-      font-size: 36px;
-      line-height: 1.25;
-      letter-spacing: 0.06em;
-    }
-  }
 }
 
-// -------------------------------------
-// ----------Стилі карток---------------
-// -------------------------------------
-.products__list {
-  display: flex;
-  gap: 29px;
-}
+.products__title {
+  margin-left: auto;
+  margin-right: auto;
 
-.products__item {
-  position: relative;
-
-  padding-top: 165px;
-  padding-right: 64px;
-  padding-bottom: 60px;
-  padding-left: 64px;
-
-  flex-basis: calc((100% - 29px * 2) / 3);
-
-  background-color: #aec6a5;
-  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-  border-radius: 24px;
-
-  &--second {
-    background-color: #efd478;
-  }
-
-  &--third {
-    background-color: #d6936d;
-  }
-}
-
-.products__shadow-wrapper {
-  position: absolute;
-  top: -35%;
-  left: 34px;
-
-  display: inline-block;
-
-  background: linear-gradient(
-      0deg,
-      rgba(156, 190, 143, 0.7),
-      rgba(156, 190, 143, 0.7)
-    ),
-    #d9d9d9;
-  box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
-  border-radius: 150px;
-
-  &--second {
-    background: linear-gradient(
-        0deg,
-        rgba(248, 210, 78, 0.7),
-        rgba(248, 210, 78, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
-  }
-
-  &--third {
-    background: linear-gradient(
-        0deg,
-        rgba(213, 117, 63, 0.7),
-        rgba(213, 117, 63, 0.7)
-      ),
-      #d9d9d9;
-    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
-  }
-}
-
-.products__img-wrapper {
-  margin-bottom: 16px;
-  overflow: hidden;
-
-  border-radius: 150px;
-}
-
-.products__subtitle {
-  margin-bottom: 66px;
-
-  font-size: 30px;
-  line-height: 1.23;
+  font-family: $secondaryFont;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $secondaryColor;
+
+  @media screen and (max-width: 767.98px) {
+    margin-bottom: 148px;
+
+    font-size: 30px;
+    line-height: 1.27;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 200px;
+
+    font-size: 34px;
+    line-height: 1.26;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 303px;
+
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
+  }
+}
+
+// -------------------------------------
+// ----------Стилі карток--------------- ГОТОВО
+// -------------------------------------
+.products__list {
+  @media screen and (max-width: calc($tablet - 0.02px)) {
+    display: block;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 29px;
+  }
+}
+// ------------------------------------------ ГОТОВО
+// --------------- ЗОБРАЖЕННЯ---------------- (АЛЕ РЕКОМЕНДУЮ УВАЖНО
+// ------------------------------------------  ПЕРЕГЛЯНУТИ top ПОЗИЦІОНУВАННЯ)
+.products__item {
+  position: relative;
+
+  background-color: #aec6a5;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+
+  @media screen and (max-width: calc($tablet - 0.02px)) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 123px;
+    padding-bottom: 16px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    width: 100%;
+    max-width: 280px;
+
+    border-radius: 24px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 108px;
+    padding-bottom: 12px;
+    padding-left: 26px;
+    padding-right: 26px;
+
+    border-radius: 15.78px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 165px;
+    padding-bottom: 60px;
+    padding-left: 64px;
+    padding-right: 64px;
+
+    border-radius: 24px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: calc($tablet - 0.02px)) {
+      margin-bottom: 168px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    display: block;
+    width: 240px;
+    height: 240px;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/products/img1_200.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/products/img1_400.png);
+    }
+
+    @media screen and (max-width: calc($tablet - 0.02px)) {
+      top: -110px; //Половина картинка з макета + візуально до макета
+      left: 20px; // (W-блока - W-картинки)/2
+    }
+
+    @media screen and (min-width: $tablet) {
+      top: -122px; //Половина картинка з макета + візуально до макета
+      left: -8px; // (W-блока - W-картинки)/2
+    }
+
+    @media screen and (min-width: $desktop) {
+      top: -188px; //Половина картинка з макета + візуально до макета
+      left: 4px; // (W-блока - W-картинки)/2
+
+      width: 362px;
+      height: 362px;
+
+      background-image: url(../images/products/img1_302.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/img1_604.png);
+      }
+    }
+  }
+
+  &--second {
+    background-color: #efd478;
+
+    &::before {
+      background-image: url(../images/products/img2_200.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/img2_400.png);
+      }
+
+      @media screen and (min-width: $desktop) {
+        background-image: url(../images/products/img2_302.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+          background-image: url(../images/products/img2_604.png);
+        }
+      }
+    }
+  }
+
+  &--third {
+    background-color: #d6936d;
+
+    &::before {
+      background-image: url(../images/products/img3_200.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(../images/products/img3_400.png);
+      }
+
+      @media screen and (min-width: $desktop) {
+        background-image: url(../images/products/img3_302.png);
+
+        @media screen and (min-device-pixel-ratio: 2),
+          screen and (min-resolution: 192dpi),
+          screen and (min-resolution: 2dppx) {
+          background-image: url(../images/products/img3_604.png);
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------------
+// ---------Стилі тексту картки-------- ГОТОВО
+// ------------------------------------
+.products__subtitle {
+  margin-bottom: 40px;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $secondaryColor;
+
+  @media screen and (max-width: calc($tablet - 0.02px)) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+    line-height: 1.23;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 66px;
+
+    font-size: 30px;
+  }
 }
 
 .products__text {
-  margin-bottom: 50px;
-  height: 142px;
-
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.76;
   text-align: center;
   letter-spacing: 0.04em;
   color: $secondaryColor;
+
+  @media screen and (max-width: calc($tablet - 0.02px)) {
+    margin-bottom: 53px;
+    height: 148px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 50px;
+    height: 175px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+    height: 142px;
+
+    font-size: 16px;
+  }
+}
+
+// ----------------------------------
+// -------Кнопка для модалки--------- ГОТОВО
+// ----------------------------------
+.products__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  padding: 0;
+
+  cursor: pointer;
+
+  background: transparent;
+  border: none;
 }
