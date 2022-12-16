@@ -13,7 +13,7 @@
   }
 
   // tablet screen
-  @media screen and (min-width: calc($mobile + 1px)) {
+  @media screen and (min-width: $tablet) {
     background-image: url(../images/common/backgroud_m@1x.jpg);
 
     // tablet screen retina
@@ -24,11 +24,11 @@
     }
   }
 
-  // desctop screen
-  @media screen and (min-width: calc($tablet + 1px)) {
+  // desktop screen
+  @media screen and (min-width: $desktop) {
     background-image: url(../images/common/backgroud_l@1x.jpg);
 
-    // desctop screen retina
+    // desktop screen retina
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
@@ -40,9 +40,11 @@
 // --------------------------------
 // --------Стилі заголовка---------
 // --------------------------------
-.products__title {
+.products__label {
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 12px;
 
   font-weight: 800;
   line-height: 1.23;
@@ -52,7 +54,6 @@
   color: $secondaryColor;
 
   @media screen and (max-width: 767.98px) {
-    margin-bottom: 40px;
     width: 100%;
     max-width: 270px;
 
@@ -61,40 +62,44 @@
   }
 
   @media screen and (min-width: $tablet) {
-    margin-bottom: 80px;
     width: 306px;
 
     font-size: 22px;
   }
 
   @media screen and (min-width: $desktop) {
-    margin-bottom: 303px;
     width: 330px;
 
     font-size: 30px;
   }
+}
 
-  &--size {
-    display: block;
-    margin-top: 12px;
+.products__title {
+  margin-left: auto;
+  margin-right: auto;
 
-    font-family: $secondaryFont;
+  font-family: $secondaryFont;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $secondaryColor;
 
-    @media screen and (max-width: 767.98px) {
-      font-size: 30px;
-      line-height: 1.27;
-    }
+  @media screen and (max-width: 767.98px) {
+    font-size: 30px;
+    line-height: 1.27;
+  }
 
-    @media screen and (min-width: $tablet) {
-      font-size: 34px;
-      line-height: 1.26;
-    }
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+    line-height: 1.26;
+  }
 
-    @media screen and (min-width: $desktop) {
-      font-size: 36px;
-      line-height: 1.25;
-      letter-spacing: 0.06em;
-    }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 303px;
+
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: 0.06em;
   }
 }
 
