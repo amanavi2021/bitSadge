@@ -1,0 +1,85 @@
+.company-contacts {
+    display: flex;
+    gap: 32px;
+}
+.company-contacts__item {
+    padding: 40px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    flex-basis: calc((100% - 64px) / 3);
+border-radius: 24px;
+background-color: #FFFFFF;
+}
+.representation {
+background-color:  #F8D24E;
+border-radius: 6px;
+margin: o;
+margin-bottom: 36px;
+padding: 4px 14px;
+
+box-sizing: border-box;
+height: auto;
+min-width: 76px;
+
+font-weight: 500;
+line-height: 1.4;
+padding: 4px 14px;
+font-size: 16px;
+text-transform: uppercase;
+color: #131313;
+}
+
+.representation__city {
+font-weight: 500;
+line-height: 1.4;
+font-size: 16px;
+color: #131313;
+
+margin: 0;
+margin-bottom: 8px;
+}
+.representation__city--address {
+    font-weight: 500;
+    line-height: 1.83;
+    font-size: 16px;
+    font-style: normal; 
+    color: #D6936D;
+    display: block;
+
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 32px;
+
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.representation__work {
+border-bottom: 1px solid #E1E1E1;
+padding-bottom: 32px;
+margin-bottom: 32px;
+}
+.representation__work-item {
+    margin-bottom: 12px;
+}
+.representation__work-item:last-child {
+    margin-bottom: 0px;
+}
+.representation__work-day, .representation__work-time {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.86;
+    color: #131313;
+}
+.representation__work-time {
+    color: #ABABAB;
+}
+.representation__tel, .representation__link {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.5;
+    color: #131313;
+    display: block;
+}
+.representation__tel {
+    margin-bottom: 4px;
+}
