@@ -3,9 +3,7 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  // background-position: center;
   background-size: contain;
-  // background-repeat: no-repeat;
   background-image: url(../images/common/backgroud_s@1x.jpg);
 
   // // mobile screen retina
@@ -17,9 +15,7 @@
 
   // tablet screen
   @media screen and (min-width: $tablet) {
-    // background-position: center;
     background-size: contain;
-    // background-repeat: no-repeat;
     background-image: url(../images/common/backgroud_m@1x.jpg);
 
     // tablet screen retina
@@ -47,7 +43,7 @@
 }
 
 // --------------------------------
-// --------Стилі заголовка--------- ГОТОВІ
+// --------Стилі заголовка--------- ГОТОВО
 // --------------------------------
 .products__label {
   display: block;
@@ -110,7 +106,7 @@
 }
 
 // -------------------------------------
-// ----------Стилі карток--------------- ГОТОВІ
+// ----------Стилі карток--------------- ГОТОВО
 // -------------------------------------
 .products__list {
   @media screen and (max-width: calc($tablet - 0.02px)) {
@@ -129,7 +125,9 @@
     grid-gap: 29px;
   }
 }
-// ------------РОЗДІЛИДИ І ДОРОБИТИ АДАПТИВКУ ЗОБРАЖЕНЬ----------------
+// ------------------------------------------ ГОТОВО
+// --------------- ЗОБРАЖЕННЯ---------------- (АЛЕ РЕКОМЕНДУЮ УВАЖНО
+// ------------------------------------------  ПЕРЕГЛЯНУТИ top ПОЗИЦІОНУВАННЯ)
 .products__item {
   position: relative;
 
@@ -178,6 +176,10 @@
     content: '';
     position: absolute;
 
+    display: block;
+    width: 240px;
+    height: 240px;
+
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -189,11 +191,20 @@
       background-image: url(../images/products/img1_400.png);
     }
 
-    @media screen and (min-width: $desktop) {
-      top: -188px;
-      left: 4px;
+    @media screen and (max-width: calc($tablet - 0.02px)) {
+      top: -110px; //Половина картинка з макета + візуально до макета
+      left: 20px; // (W-блока - W-картинки)/2
+    }
 
-      display: block;
+    @media screen and (min-width: $tablet) {
+      top: -122px; //Половина картинка з макета + візуально до макета
+      left: -8px; // (W-блока - W-картинки)/2
+    }
+
+    @media screen and (min-width: $desktop) {
+      top: -188px; //Половина картинка з макета + візуально до макета
+      left: 4px; // (W-блока - W-картинки)/2
+
       width: 362px;
       height: 362px;
 
@@ -257,7 +268,7 @@
 }
 
 // ------------------------------------
-// ---------Стилі тексту картки-------- ГОТОВІ
+// ---------Стилі тексту картки-------- ГОТОВО
 // ------------------------------------
 .products__subtitle {
   margin-bottom: 40px;
@@ -309,6 +320,9 @@
   }
 }
 
+// ----------------------------------
+// -------Кнопка для модалки--------- ГОТОВО
+// ----------------------------------
 .products__button {
   display: flex;
   justify-content: center;
