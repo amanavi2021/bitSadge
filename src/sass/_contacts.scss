@@ -1,85 +1,142 @@
+
 .company-contacts {
-    display: flex;
-    gap: 32px;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        gap: 16px;
+    }
+   
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        gap: 32px;
+    }
 }
+
 .company-contacts__item {
     padding: 40px;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    flex-basis: calc((100% - 64px) / 3);
-border-radius: 24px;
-background-color: #FFFFFF;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+    
+    @media screen and (min-width: $tablet) {
+   
+    flex-basis: calc((100% - 32px * 2) / 3);
+
+    }
 }
 .representation {
+    border-radius: 4px;
+    margin: o;
 background-color:  #F8D24E;
-border-radius: 6px;
-margin: o;
-margin-bottom: 32px;
-padding: 4px 14px;
-
+margin-bottom: 20px;
+padding: 4px 22px;
+font-weight: 500;
+line-height: 1.2;
 box-sizing: border-box;
 height: auto;
 min-width: 76px;
-
-font-weight: 500;
-line-height: 1.4;
-padding: 4px 14px;
-font-size: 16px;
+font-size: 12px;
 text-transform: uppercase;
 color: #131313;
+
+@media screen and (min-width: $tablet) {
+border-radius: 6px;
+margin-bottom: 32px;
+padding: 4px 14px;
+line-height: 1.4;
+font-size: 16px;
+}
 }
 
 .representation__city {
 font-weight: 500;
-line-height: 1.4;
-font-size: 16px;
+line-height: 1.86;
+font-size: 12px;
 color: #131313;
-
 margin: 0;
 margin-bottom: 8px;
+
+@media screen and (min-width: $tablet) {
+font-size: 14px;
+}
+@media screen and (min-width: $desktop) {
+    font-size: 16px;
+    }
+
 }
 .representation__city--address {
     font-weight: 500;
     line-height: 1.83;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal; 
     color: #D6936D;
     display: block;
 
     border-bottom: 1px solid #E1E1E1;
-    padding-bottom: 32px;
+    padding-bottom: 24px;
 
     margin: 0;
+    margin-bottom: 24px;
+    @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    padding-bottom: 32px;
     margin-bottom: 32px;
+    }
+    @media screen and (min-width: $desktop) {
+    font-size: 16px;
+     }
 }
 
 .representation__work {
 border-bottom: 1px solid #E1E1E1;
+padding-bottom: 24px;
+margin-bottom: 24px;
+@media screen and (min-width: $tablet) {
 padding-bottom: 32px;
 margin-bottom: 32px;
 }
+}
 .representation__work-item {
+    margin-bottom: 8px;
+ @media screen and (min-width: $desktop) {
     margin-bottom: 12px;
+ }
 }
 .representation__work-item:last-child {
     margin-bottom: 0px;
 }
 .representation__work-day, .representation__work-time {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.86;
     color: #131313;
+    @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    }
+    @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    }
 }
 .representation__work-time {
     color: #ABABAB;
 }
 .representation__tel, .representation__link {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     font-style: normal;
     line-height: 1.5;
     color: #131313;
     display: block;
+
+    @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    }
+    @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    }
 }
 .representation__tel {
+    margin-bottom: 6px;
+    @media screen and (min-width: $desktop) {
     margin-bottom: 4px;
+    }
 }
