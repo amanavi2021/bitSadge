@@ -108,6 +108,7 @@
     }
 
     &-text {
+      // position: relative;
       width: 139px;
 
       margin-left: 16px;
@@ -129,21 +130,23 @@
 
     //IT DOESNT WORK, SEND HELP
     &-text::after {
-      content: url(../images/hero/svgs.svg#arrow);
+      
+      content: url(../images/hero/arrow.png);
       width: 40px;
-      fill: currentColor;
       position: absolute;
-      display: block;
       bottom: 111px;
       left: 257px;
+      display: block;
+      width: 40px;
+      height: 16px;
 
       @media screen and (min-width: $tablet) {
-        wbottom: 32px;
+        bottom: 32px;
         left: 216px;
       }
       @media screen and (min-width: $desktop) {
         bottom: 111px;
-        left: 257px;
+        left: 283px;
       }
     }
   }
