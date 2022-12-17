@@ -1,0 +1,188 @@
+/*-----------Секція Advantages----------*/
+
+.advantages {
+    background-color: $bgGreenColor;
+    padding-top: 0;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        padding-bottom: 32px;        
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding-bottom: 60px;                
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-bottom: 80px;        
+    }
+}
+
+/*-----Стилі списка Advantages-----*/
+
+.advantages__list {
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        padding-left: 29px;
+        padding-right: 29px;
+    }
+
+
+    @media screen and (min-width: $tablet) {
+        padding-left: 60px;
+        padding-right: 60px;
+        display: flex;                
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/*-----Стилі елементів списка Advantages-----*/
+
+@media screen and (max-width: calc($tablet - 1px)) {
+    .advantages__item:not(:last-child) {
+        margin-bottom: 28px;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .advantages__item:not(:last-child) {
+        margin-right: 80px;        
+    }
+
+    .advantages__item {
+        display: block;       
+    }
+}
+
+@media screen and (min-width: $desktop) {
+    .advantages__item:not(:last-child) {
+        margin-right: 32px;        
+    }    
+}
+
+/*-----Псевдоелементи елементів списка Advantages-----*/
+
+.advantages__item::before {
+    
+    width: 50px;
+    height: 50px;
+    content: "";
+
+    background-color: $accentColor;
+    border-radius: 25px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 40px;
+    }
+}
+    
+.advantages__item:nth-child(1)::before {
+
+    background-size: 36px 36px;
+    background-image: url(../images/advantages/cow-36-1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/cow-72-2x.png);
+  }
+}
+
+.advantages__item:nth-child(2)::before {
+
+    background-size: 36px 36px;
+    background-image: url(../images/advantages/weight-36-1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/weight-72-2x.png);
+  }
+}
+
+.advantages__item:nth-child(3)::before {
+
+    background-size: 36px 36px;
+    background-image: url(../images/advantages/ice-crema-36-1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+    background-image: url(../images/advantages/ice-crema-72-2x.png);
+  }
+}
+
+/*-----Заголовки елементів списка Advantages-----*/
+
+.advantages__title {
+    font-weight: 700;
+    line-height: 1.22;
+
+    text-align: center;
+    letter-spacing: 0.04em;    
+
+    color: $mainColor;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        font-size: 36px;
+        text-transform: uppercase;
+
+        margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 48px;
+        margin-bottom: 12px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 58px;        
+    }    
+}
+
+/*-----Текст елементів списка Advantages-----*/
+
+.advantages__text {
+    font-weight: 700;    
+
+    text-align: center;
+
+    color: $mainColor;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    @media screen and (min-width: $tablet) {
+        font-size: 14px;
+        line-height: 1.74;        
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 16px;
+        line-height: 1.76;
+
+        letter-spacing: 0.02em;
+    }    
+}
