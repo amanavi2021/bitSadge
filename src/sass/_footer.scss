@@ -16,13 +16,16 @@
         
     }
     &__btn {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
 
             //tablet
         @media screen and (min-width: $tablet) {
-            display: flex;
-            gap: 16px;
-            align-items: center;
-            justify-content: center;
+            flex-direction: row;
             
         }
     }
