@@ -1,19 +1,16 @@
 .about {
-    background-color: #84A178;
+    background-color: $bgGreenColor;
 }
 
 .about__label {
-    font-family: '$mainFont';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
-
-
     text-align: center;
     text-transform: uppercase;
 
-    color: #FCFCFC;
+    color: $mainColor;
 }
 
 .about__title {
@@ -26,5 +23,5 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    color: #FCFCFC;
+    color: $mainColor;
 }
