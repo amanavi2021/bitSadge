@@ -18,6 +18,11 @@
 margin-left: auto;
 margin-right: auto;
     color: $mainColor;
+    @media screen and (min-width:$tablet){
+        margin-bottom: 12px; 
+    
+    }
+
 }
 
 .about__title {
@@ -35,7 +40,7 @@ padding-right: 59px;
 
     color: $mainColor;
     @media screen and (min-width:$tablet){
-        margin-bottom: 369px;
+        margin-bottom: 80px;
     }
         
     
@@ -47,6 +52,13 @@ padding-right: 59px;
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 40px;
+    @media screen and (min-width:$tablet){
+        width: 336px;
+        margin-top: 0;
+        margin-left:368px;
+        padding-left: 0;
+    padding-right: 0;
+    }
     
 }
 .about__text{
@@ -85,13 +97,19 @@ left: 179px;
 
 .about__btn{
     margin-top: 10px;
-   
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (min-width:$tablet){
+        margin-top: 32px; 
+        margin-left:366px;
+       
+    }
 }
 .about__icon{
     margin-left: 4px;
 }
 
-.about__thumb{
-display: flex;
-   justify-content: center;
-}
+// .about__thumb{
+// display: flex;
+//    justify-content: center;
+// }
