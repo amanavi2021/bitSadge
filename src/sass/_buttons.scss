@@ -1,22 +1,26 @@
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: 0;
-    border-radius: 10px;
-    padding: 12px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 26px;
+  box-sizing: border-box;
 
-    // width: 196px;
-    height: 42px;
+  // width: 196px;
+  height: 38px;
 
-    font-family: inherit;
-    font-weight: 600;
-    line-height: calc(18/14);
-    cursor: pointer;
-    color: $secondaryColor;
-    background-color: $accentColor;
-    border: 2px solid transparent;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: calc(18 / 14);
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+  color: $secondaryColor;
+  background-color: $accentColor;
+  border: 2px solid transparent;
 
     transition: background-color 250ms $timingFunction,
     color 250ms $timingFunction;
@@ -36,16 +40,17 @@
             color: #000000;
         }
 
-    &--large{
-    width: 196px;    
-    margin-left: auto;
-    margin-right: auto;
 
-    //tablet
-    @media screen and (min-width: $tablet) {
-        margin: 0;
-    }
-        }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    padding: 12px 34px;
+    height: 42px;
+  }
+
+  &--large {
+    width: 196px;
+    // margin-left: auto;
+    // margin-right: auto;
 
     &--green{
     background-color: transparent;
@@ -60,8 +65,6 @@
     }
     }
 
-    
-   
     &--green:hover{
         border-color: $hoverGreenColor;
         background-color: transparent;
