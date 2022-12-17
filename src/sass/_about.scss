@@ -2,15 +2,17 @@
     background-color: $bgGreenColor;
     position: relative;
     padding-top: 60px;
-    padding-bottom:64px;
+    padding-bottom:50px;
 }
 
+
 .about__label {
-    
+    padding-left: 55px;
+    padding-right:55px;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
- 
+ margin-bottom: 15px;
     text-align: center;
     text-transform: uppercase;
 margin-left: auto;
@@ -19,8 +21,10 @@ margin-right: auto;
 }
 
 .about__title {
-margin-bottom: 372px;
 
+margin-bottom: 29px;
+padding-left: 61px;
+padding-right: 59px;
     font-family: $secondaryFont;
     font-weight: 400;
     font-size: 30px;
@@ -30,42 +34,53 @@ margin-bottom: 372px;
     text-transform: uppercase;
 
     color: $mainColor;
+    @media screen and (min-width:$tablet){
+        margin-bottom: 369px;
+    }
+        
+    
 }
-
 .about__list{
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: 40px;
     
 }
-
-
 .about__text{
-font-weight: 400;
+    display: flex;
+    font-weight: 400;
     font-size: 12px;
     line-height: 1.76;
-
-    text-align: center;
     letter-spacing: 0.04em;
-
     color:$mainColor;
+    @media screen and (max-width:767px){
+        text-align: center;
+    }
+
 }
 
-
-
 .about__text--hidden{
-    display: none;
-    @media screen and (min-width:$tablet) {
-           display: block;
+    @media screen and (max-width:767px) {  
+        display: none;
         }
 }
 
 .about__img{
+margin-left: auto;
+margin-right: auto;
+@media screen and (min-width:$tablet){
 position: absolute;
-left: 79px;
-    top: 131px;
+left: 179px;
+    top: 351px;
+    transform: translate(-50%,-50%);
+}
+@media screen and (min-width:$desktop){
+    left: 163px;
+    top: 392px;
+}
 }
 
 .about__btn{
