@@ -1,21 +1,24 @@
 .about {
     background-color: $bgGreenColor;
+    position: relative;
 }
 
 .about__label {
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
+ 
     text-align: center;
     text-transform: uppercase;
-
+margin-left: auto;
+margin-right: auto;
     color: $mainColor;
 }
 
 .about__title {
+margin-bottom: 372px;
+
     font-family: $secondaryFont;
-    font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 1.23;
@@ -24,4 +27,46 @@
     text-transform: uppercase;
 
     color: $mainColor;
+}
+
+.about__list{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    
+}
+
+
+.about__text{
+font-weight: 400;
+    font-size: 12px;
+    line-height: 1.76;
+
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color:$mainColor;
+}
+
+
+
+.about__text--hidden{
+    display: none;
+    @media screen and (min-width:$tablet) {
+           display: block;
+        }
+}
+
+.about__img{
+position: absolute;
+left: 20px;
+    top: 241px;
+}
+
+.about__btn{
+    margin-top: 10px;
+   
+}
+.about__icon{
+    margin-left: 4px;
 }
