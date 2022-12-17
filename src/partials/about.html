@@ -4,30 +4,25 @@
       >tradition and love
       <h2 class="about__title">how it’s made?</h2>
     </label>
-    <picture>
-      <source
-        media="(min-width: 1200px)"
-        srcset="../images/how it made/cow_desktop.png 1x, ../images/how it made/cow_desktop@2x.png 2x"
-        type="image/png"
-      />
 
-      <source
-        media="(min-width: 768px)"
-        srcset="../images/how it made/cow_tab.png 1x, ../images/how it made/cow_tab@2x.png 2x"
-        type="image/png"
-      />
-
-      <source
-        media="(max-width: 767px)"
-        srcset="../images/how it made/cow_mob.png, ../images/how it made/cow_mob@2x.png 2x"
-        type="image/png"
-      />
-      <img
-        class="team-avatar"
-        src="../images/how it made/cow_tab@2x.png"
-        alt="Cow photo"
-      />
-    </picture>
+    <img
+      class="about__img"
+      srcset="
+                  ../images/how it made/cow_mob.png 313w,
+                  ../images/how it made/cow_mob@2x.png 626w,
+                  ../images/how it made/cow_tab.png 370w,
+                  ../images/how it made/cow_tab@2x.png 740w,
+                  ../images/how it made/cow_desktop.png 536w,
+                  ../images/how it made/cow_desktop@2x.png 1072w
+                "
+      sizes="(min-width: 1200px) 491px, (min-width: 768px) 330px, (min-width: 480px) 280px,
+              100vw"
+      src="../images/how it made/cow_tab.png"
+      alt="Cow photo"
+      width="330"
+      height="356"
+      loading="lazy"
+    />
     <ul class="about__list">
       <li class="about__text">
         Ice is a place where you will become not only a little happier, but also
