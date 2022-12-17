@@ -1,6 +1,20 @@
 .footer {
     background-color: $bgGreenColor;
-    
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    //tablet
+    @media screen and (min-width: $tablet) {
+        padding-top: 40px;
+        padding-bottom: 12px;
+        
+    }
+
+        //desktop
+    @media screen and (min-width: $desktop) {
+        padding-top: 60px;
+        
+    }
     &__btn {
 
             //tablet
@@ -11,6 +25,10 @@
             justify-content: center;
             
         }
+    }
+
+    &__icon {
+       margin-left: 7px; 
     }
 
     &__text {
@@ -102,7 +120,6 @@
     &__contact {
 
         margin-top: 20px;
-        margin-right: 20px;
         
         font-weight: 700;
         font-size: 12px;
@@ -136,7 +153,32 @@
     line-height: calc(22 / 12);
     text-align: right;
     color: $mainColor;
+    
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    
+    //tablet
+    @media screen and (min-width: $tablet) {
+        margin-right: 17px;
     }
+
+    //desktop
+    @media screen and (min-width: $desktop) {
+        margin-right: 0;
+        
+    }
+    }
+
+    &__tel:hover,
+    &__tel:focus {
+        color:$accentColor;
+    }
+}
+
+.container--footer {
+    position: relative;
+ 
 }
 
 .socials {
@@ -146,12 +188,20 @@
     gap: 20px;
 
     margin-top: 60px;
-    margin-right: 20px;
+
+
+    &__icon {
+        fill: $bgGreenColor;
+        
+        transition-property: fill;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 250ms;
+    }
 
    //tablet
 
    @media screen and (min-width: $tablet) {
-    margin-top: 60px;
+    margin-top: 20px;
     
    }
 
@@ -162,12 +212,19 @@
    }
 
     &__link {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 34px;
         height: 34px;
         border-radius: 50%;
         background-color: $accentColor;
         text-align: center;
+    }
+
+    &__link:hover .socials__icon, 
+    &__link:focus .socials__icon {
+        fill: $mainColor;
     }
 }
  
@@ -183,9 +240,15 @@
 
     //tablet
 @media screen and (min-width: $tablet) {
+    margin-top: 32px;
     
     margin-bottom: 12px;
     
+}
+
+@media screen and (min-width: $desktop) {
+    margin-top: 60px;
+
 }
 }
 
@@ -197,8 +260,6 @@ line-height: calc(21 / 14);
 text-align: center;
 color: #7A7A7A;
 
-padding-bottom: 20px;
-
 margin-left: auto;
 margin-right:auto;
 
@@ -207,14 +268,6 @@ margin-right:auto;
     width: 100%;
     max-width: 150px;
 }
-//tablet
-@media screen and (min-width: $tablet) {
-    
-    padding-bottom: 12px;
-    
-}
+
 }
 
-.container--footer {
-    position: relative;
-}
