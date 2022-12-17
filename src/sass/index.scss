@@ -1,11 +1,11 @@
 // utils styles
-@import "./utils/variables";
-@import "./utils/visually-hidden";
+@import './utils/variables';
+@import './utils/visually-hidden';
 // base styles
 @import './common';
-@import "./base/base";
-@import "./container";
-@import "./buttons";
+@import './base/base';
+@import './container';
+@import './buttons';
 
 //example
 
@@ -13,10 +13,11 @@
 
 //index.html
 @import './header';
-@import "./products";
-@import "./about";
-@import "./advantages";
-@import "./gallery";
-@import "./customer-reviews";
-@import "./contacts";
-@import "./footer";
+@import './hero';
+@import './products';
+@import './about';
+@import './advantages';
+@import './gallery';
+@import './customer-reviews';
+@import './contacts';
+@import './footer';

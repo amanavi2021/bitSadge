@@ -1,58 +1,64 @@
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: 0;
-    border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 11px 26px;
+  box-sizing: border-box;
+
+  // width: 196px;
+  height: 38px;
+
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: calc(18 / 14);
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+  color: $secondaryColor;
+  background-color: $accentColor;
+  border: 2px solid transparent;
+
+  transition: background-color 250ms $timingFunction;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
     padding: 12px 34px;
-
-    // width: 196px;
     height: 42px;
+  }
 
-    font-family: inherit;
-    font-weight: 600;
-    line-height: calc(18/14);
-    cursor: pointer;
-    color: $secondaryColor;
-    background-color: $accentColor;
-    border: 2px solid transparent;
-
-    transition: background-color 250ms $timingFunction;
-
-    &--large{
-    width: 196px;    
-    margin-left: auto;
-    margin-right: auto;
+  &--large {
+    width: 196px;
+    // margin-left: auto;
+    // margin-right: auto;
 
     //tablet
-    @media screen and (min-width: $tablet) {
-        margin: 0;
-    }
-        }
+    // @media screen and (min-width: $tablet) {
+    //   margin: 0;
+    // }
+  }
 
-  
-
-    &--green{
+  &--green {
     background-color: $bgGreenColor;
     border-color: $accentColor;
-    margin-top: 16px;
+    // margin-top: 16px;
 
-     //tablet
-     @media screen and (min-width: $tablet) {
-        margin: 0;
-    }
-    }
+    //tablet
+    // @media screen and (min-width: $tablet) {
+    //   margin: 0;
+    // }
+  }
 
-    &:hover,
-    &:focus {
-    background-color:#DFC157;
+  &:hover,
+  &:focus {
+    background-color: #dfc157;
+  }
 
-    }
-   
-    &--green:hover,
-    &--green:focus{
-    background-color: #AEC6A5;
-    }
-
+  &--green:hover,
+  &--green:focus {
+    background-color: #aec6a5;
+  }
 }
