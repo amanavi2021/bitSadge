@@ -1,0 +1,30 @@
+.about {
+    background-color: #84A178;
+}
+
+.about__label {
+    font-family: '$mainFont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FCFCFC;
+}
+
+.about__title {
+    font-family: $secondaryFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.23;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #FCFCFC;
+}
