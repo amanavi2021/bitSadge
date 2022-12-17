@@ -22,7 +22,24 @@
   background-color: $accentColor;
   border: 2px solid transparent;
 
-  transition: background-color 250ms $timingFunction;
+    transition: background-color 250ms $timingFunction,
+    color 250ms $timingFunction;
+
+    &:hover {
+        background-color:$hoverGreenColor;
+        color: #000000;
+        }
+    
+        &:focus {
+        background-color:$hoverGreenColor;
+        color: #ffffff;
+        }
+    
+        &:disabled {
+            background-color:$disabledGreyColor;
+            color: #000000;
+        }
+
 
   @media screen and (min-width: $desktop) {
     font-size: 14px;
@@ -35,30 +52,33 @@
     // margin-left: auto;
     // margin-right: auto;
 
-    //tablet
-    // @media screen and (min-width: $tablet) {
-    //   margin: 0;
-    // }
-  }
-
-  &--green {
-    background-color: $bgGreenColor;
+    &--green{
+    background-color: transparent;
     border-color: $accentColor;
-    // margin-top: 16px;
+    color:#000000;
+    margin-top: 16px;
+    transition: border-color 250ms $timingFunction, color 250ms $timingFunction;
 
-    //tablet
-    // @media screen and (min-width: $tablet) {
-    //   margin: 0;
-    // }
-  }
+     //tablet
+     @media screen and (min-width: $tablet) {
+        margin: 0;
+    }
+    }
 
-  &:hover,
-  &:focus {
-    background-color: #dfc157;
-  }
+    &--green:hover{
+        border-color: $hoverGreenColor;
+        background-color: transparent;
+    }
 
-  &--green:hover,
-  &--green:focus {
-    background-color: #aec6a5;
-  }
+    &--green:focus{
+    border-color: $hoverGreenColor;
+    background-color: transparent;
+    color: #ffffff;
+    }
+
+    &--green:disabled {
+    border-color:$disabledGreyColor;
+    color: #000000;
+    }
+
 }
