@@ -1,9 +1,12 @@
 .about {
     background-color: $bgGreenColor;
     position: relative;
+    padding-top: 60px;
+    padding-bottom:64px;
 }
 
 .about__label {
+    
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
@@ -33,6 +36,8 @@ margin-bottom: 372px;
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
     
 }
 
@@ -59,8 +64,8 @@ font-weight: 400;
 
 .about__img{
 position: absolute;
-left: 20px;
-    top: 241px;
+left: 79px;
+    top: 131px;
 }
 
 .about__btn{
@@ -69,4 +74,9 @@ left: 20px;
 }
 .about__icon{
     margin-left: 4px;
+}
+
+.about__thumb{
+display: flex;
+   justify-content: center;
 }
