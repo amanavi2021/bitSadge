@@ -1,5 +1,29 @@
+.contacts {
+  
+  background-image: linear-gradient(
+    to top,
+    $bgGreenColor 72%,
+    transparent 72%,
+    transparent 100%);
 
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+    to top,
+    $bgGreenColor 44%,
+    transparent 44%,
+    transparent 100%);
+    }
+   @media screen and (min-width: $desktop) {
+      background-image: linear-gradient(
+        to top,
+        $bgGreenColor 77%,
+        transparent 77%,
+        transparent 23%);
+    }
+
+}
 .company-contacts {
+  
   @media screen and (min-width: $tablet) {
     display: flex;
     gap: 16px;
@@ -12,16 +36,25 @@
 }
 
 .company-contacts__item {
+
   padding-top: 40px;
   padding-left: 32px;
   padding-right: 32px;
   padding-bottom: 24px;
+
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
   background-color: $mainColor;
 
   @media screen and (max-width: 767.88px) {
     margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
   @media screen and (min-width: $tablet) {
     flex-basis: calc((100% - 16px * 2) / 3);
@@ -34,33 +67,38 @@
   }
 
 .representation {
-  border-radius: 4px;
+
   display: inline-block;
+
   margin: o;
-  background-color: $accentColor;
+  border-radius: 4px;
   margin-bottom: 20px;
   padding: 4px 22px;
+
   font-weight: 500;
   line-height: 1.2;
-  box-sizing: border-box;
   font-size: 12px;
   text-transform: uppercase;
   color: $secondaryColor;
+  background-color: $accentColor;
 
   @media screen and (min-width: $tablet) {
-    border-radius: 6px;
+
     margin-bottom: 32px;
     padding: 4px 14px;
     line-height: 1.4;
     font-size: 16px;
+    border-radius: 6px;
   }
 }
 
 .representation__city {
+
   font-weight: 500;
   line-height: 1.86;
   font-size: 12px;
   color: $secondaryColor;
+
   margin: 0;
   margin-bottom: 8px;
 
@@ -73,18 +111,19 @@
   }
 }
 .representation__city--address {
+
   font-weight: 500;
   line-height: 1.83;
   font-size: 12px;
   font-style: normal;
   color: #d6936d;
+  
   display: block;
-
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 24px;
-
   margin: 0;
   margin-bottom: 24px;
+
   @media screen and (min-width: $tablet) {
     font-size: 14px;
     padding-bottom: 32px;
@@ -99,6 +138,7 @@
   border-bottom: 1px solid #e1e1e1;
   padding-bottom: 24px;
   margin-bottom: 24px;
+  
   @media screen and (min-width: $tablet) {
     padding-bottom: 32px;
     margin-bottom: 32px;
@@ -127,7 +167,7 @@
   }
 }
 .representation__work-time {
-  color: #ababab;
+  color: $disabledGreyColor;
 }
 .representation__tel,
 .representation__link {
