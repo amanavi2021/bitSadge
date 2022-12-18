@@ -1,0 +1,90 @@
+.customer-reviews{
+    margin-left: auto;
+    margin-right: auto;
+
+
+    @media screen and (max-width: calc($tablet - 0.02px)) {
+      max-width: 480px;
+      padding: 0 20px 393px 20px; 
+    }
+  
+    @media screen and (min-width: $tablet) {
+      width: 768px;
+      padding: 0 32px 379px 32px;
+    }
+  
+    @media screen and (min-width: $desktop) {
+      width: 1200px;
+      padding: 0 94px 135px 93px;
+    }
+    
+}
+
+.reviews{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   
+
+
+    .comments{
+        
+        border-radius: 24px;
+        background-color: #84A178;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        text-align: center;
+        color: #FCFCFC;
+        letter-spacing: 0.04em;
+        
+
+          @media screen and (max-width: calc($tablet - 0.02px)) {
+            padding: 35px 39px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 255%;
+          }
+        
+          @media screen and (min-width: $tablet) {
+            padding: 28px 80px;
+            font-weight: 500;
+            line-height: 186%;
+            
+          }
+        
+          @media screen and (min-width: $desktop) {
+            margin-left: 23px;
+            margin-right: 22px;
+            padding: 43px 109px;
+            font-size: 16px;
+            line-height: 186%;
+          }
+    }
+
+    .user-info{
+        text-align: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 186%;
+        margin-bottom: 32px;
+
+        @media screen and (max-width: calc($tablet - 0.02px)) {
+            font-size: 20px;   
+        }
+
+    }
+
+    .reviews-img{
+        display: block;
+        border-radius: 50%;
+
+    }
+
+}
+
+.slider{
+    text-align: center;
+
+}
