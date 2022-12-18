@@ -1,2 +1,109 @@
 <header class="header">
+   <div class="header__container">
+      <ul class="header__items">
+         <li class="header__item">
+            <div class="header__logo">
+               <img alt="" src="#" class="header__logo-img">
+               <svg class="header__logo-item" width="60" height="65">
+                  <use
+                    class="header__logo-item"
+                    href="./img/vector/symbol-defs.svg#icont-vectorLogo"
+                  ></use>
+                </svg>
+            </div>
+         </li>
+         <li class="header__item">
+            <nav class="header__nav">
+               <ul class="header__nav-items">
+                  <li class="header__nav-menu">
+                     <button type="button"
+             class="header__nav-menu-yellow js-open-menu"
+             aria-expanded="false"
+             aria-controls="mobile-menu"
+           >
+             <svg class="menu__burger" width="32" height="32">
+               <use
+                 class="menu__icon"
+                 href="./img/vector/symbol-defs.svg#icont-vectoreva_menu-fill"
+               ></use>
+             </svg>
+           </button>
+                  </li>
+                  <li class="header__nav-item">
+                     <a href="" class="header__nav-link">
+                        Home
+                  </a>
+               </li>
+                  <li class="header__nav-item">
+                     <button class="header__nav-link" type="button">
+                        How it’s made?
+                  </button>
+               </li>
+                  <li class="header__nav-item">
+                     <a href="" class="header__nav-link">
+                        Our products
+                  </a>
+               </li>
+                  <li class="header__nav-item">
+                     <a href="" class="header__nav-link">
+                        Contact
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </li>
+         <li class="header__item">
+            <button class="header__button--yellow" type="button">
+               <span class="header__button-text">Buy now</span> 
+               <svg class="header__button-icon" width="12" height="12">
+                  <use
+                    href="./img/vector/symbol-defs.svg#icont-vectorarrow"
+                  ></use>
+                </svg>
+            </button>
+         </li>
+      </ul>
+   </div>
+   <div class="modal-menu js-menu-container" id="mobile-menu">
+      <button class="modal-menu__close js-close-menu" type="button">
+         <svg class="modal-menu__icon" width="32" height="32">
+            <use
+              class="modal-menu__close-icon"
+              href="./img/vector/symbol-defs.svg#icont-vectorep_close"
+            ></use>
+          </svg>
+      </button>
+      <ul class="modal-menu__items">
+         <li class="modal-menu__item">
+            <a href="" class="modal-menu__link">
+               Home
+            </a>
+         </li>
+         <li class="modal-menu__item">
+            <a href="" class="modal-menu__link">
+               How it’s made?
+            </a>
+         </li>
+         <li class="modal-menu__item">
+            <a href="" class="modal-menu__link">
+               Our products
+            </a>
+         </li>
+         <li class="modal-menu__item">
+            <a href="" class="modal-menu__link">
+               Contact
+            </a>
+         </li>
+      </ul>
+      <button class="modal-menu__button-buy" type="button">
+         <span class="modal-menu__button-buy-text">Buy now</span>
+         <svg class="modal-menu__button-buy-arrow" width="12" height="12">
+            <use
+              class="modal-menu__button-buy-icon"
+              href="./img/vector/symbol-defs.svg#icont-vectorarrow"
+            ></use>
+          </svg>
+      </button>
+   </div>
+   <script src="./js/mobile-menu.js"></script>
 </header>
