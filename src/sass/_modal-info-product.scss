@@ -1,0 +1,18 @@
+.modal-info__ingredients-green{
+    overflow-y: scroll;
+}
+.modal-info__ingredients{
+    z-index: 100;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 280px;
+    padding: 28px 20px 32px;
+    background-color: $mainColor;
+    border: 2px solid $accentColor;
+    border-radius: 10px;
+}
+.modal-info__ingredients--close-btn{
+
+}
