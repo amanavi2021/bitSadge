@@ -40,6 +40,12 @@
             color: #000000;
         }
 
+        &:hover,
+        &:focus,
+        &:active{
+                cursor: url(../images/pointer.png), auto;
+            }
+
 
   @media screen and (min-width: $desktop) {
     font-size: 14px;

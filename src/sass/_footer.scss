@@ -231,6 +231,11 @@
     &__link:focus .socials__icon {
         fill: $mainColor;
     }
+
+    &__link:hover, 
+    &__link:focus{
+        cursor: url(../images/pointer.png), auto;
+    }
 }
  
 
