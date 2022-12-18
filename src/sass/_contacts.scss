@@ -1,5 +1,4 @@
 .contacts {
-  
   background-image: linear-gradient(
     to top,
     $bgGreenColor 72%,
@@ -14,11 +13,11 @@
     transparent 100%);
     }
    @media screen and (min-width: $desktop) {
-      background-image: linear-gradient(
-        to top,
-        $bgGreenColor 77%,
-        transparent 77%,
-        transparent 23%);
+    background-image: linear-gradient(
+    to top,
+    $bgGreenColor 77%,
+    transparent 77%,
+    transparent 100%);
     }
 
 }
