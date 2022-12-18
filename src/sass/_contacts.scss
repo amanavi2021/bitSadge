@@ -66,6 +66,7 @@
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
+    margin-bottom: 12px;
   }
   @media screen and (min-width: $desktop) {
     font-size: 16px;
@@ -154,7 +155,7 @@ transition: color 250ms $timingFunction;
 
 .representation__tel {
   margin-bottom: 6px;
-  @media screen and (min-width: $desktop) {
+  @media screen and (min-width: $tablet) {
   margin-bottom: 4px;
   }
 }
