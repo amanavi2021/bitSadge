@@ -1,9 +1,9 @@
 // Основная кнопка
 (() => {
     const refs = {
-      openModalBtn: document.querySelector("[data-modal-open-buy-n]"),
-      closeModalBtn: document.querySelector("[data-modal-close-buy-n]"),
-      modal: document.querySelector("[data-modal-buy-n]"),
+      openModalBtn: document.querySelector("[data-modal-open-buy]"),
+      closeModalBtn: document.querySelector("[data-modal-close-buy]"),
+      modal: document.querySelector("[data-modal-buy]"),
     };
   
     refs.openModalBtn.addEventListener("click", toggleModal);
