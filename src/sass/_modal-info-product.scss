@@ -12,7 +12,51 @@
     background-color: $mainColor;
     border: 2px solid $accentColor;
     border-radius: 10px;
+
+    @media screen and (max-width: 479px) {
+        .modal-info__ingredients{
+            width: auto;
+            height: auto;
+        }
+    }
+    @media screen and (min-width: 768px){
+        .modal-info__ingredients {
+            width: 568px;
+        }
+    }
 }
 .modal-info__ingredients--close-btn{
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    border: none;
+    background: none;
+    padding: 0;
+    line-height: 0;
+    transform: rotate(0deg);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
 
+    @media screen and (min-width:768px) {
+    top: 20px;
+    right: 20px;
+    }
+}
+.modal__ingredients--btn-icon{
+    .modal-info__ingredients--close-btn:hover &,
+    .modal-info__ingredients--close-btn:focus &{
+        fill: $accentColor;
+    }
+}
+.ingredients{
+    margin-bottom: 40px;
+}
+.ingredients__title{
+    font-family: $secondaryFont;
+    font-size: 20px;
+    line-height: calc(28 / 20);
+    text-align: center;
+    margin-bottom: 22px;
+    color: $secondaryColor;
 }
