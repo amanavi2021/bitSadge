@@ -3,7 +3,17 @@
     position: relative;
     padding-top: 60px;
     padding-bottom:50px;
+    @media screen and (min-width:$tablet){
+        padding-bottom:80px;
+    
+    }
+    @media screen and (min-width:$desktop){
+        padding-bottom:146px;
+        
+    
+    }
 }
+
 
 
 .about__label {
@@ -20,13 +30,14 @@ margin-right: auto;
     color: $mainColor;
     @media screen and (min-width:$tablet){
         margin-bottom: 12px; 
+         padding-left: 0;
+    padding-right:0;
     
     }
 
 }
 
 .about__title {
-
 margin-bottom: 29px;
 padding-left: 61px;
 padding-right: 59px;
@@ -40,24 +51,30 @@ padding-right: 59px;
 
     color: $mainColor;
     @media screen and (min-width:$tablet){
-        margin-bottom: 80px;
+        margin-bottom: 0;
     }
-        
+    
     
 }
 .about__list{
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-top: 40px;
     @media screen and (min-width:$tablet){
         width: 336px;
-        margin-top: 0;
+        
+        margin-top: 80px;
         margin-left:368px;
-        padding-left: 0;
-    padding-right: 0;
+    //     padding-left: 32px;
+    // padding-right: 32px;
+    @media screen and (min-width:$desktop){
+        width: 463px;
+        margin-top: 172px;
+        margin-left:600px;
+    }
     }
     
 }
@@ -71,6 +88,9 @@ padding-right: 59px;
     @media screen and (max-width:767px){
         text-align: center;
     }
+    // @media screen and (min-width:$tablet){
+    //     width: 334px;
+    // }
 
 }
 
@@ -85,13 +105,13 @@ margin-left: auto;
 margin-right: auto;
 @media screen and (min-width:$tablet){
 position: absolute;
-left: 179px;
-    top: 351px;
+left: 198px;
+    top: 379px;
     transform: translate(-50%,-50%);
 }
 @media screen and (min-width:$desktop){
-    left: 163px;
-    top: 392px;
+    left: 246px;
+    top: 411px;
 }
 }
 
@@ -101,15 +121,15 @@ left: 179px;
     margin-right: auto;
     @media screen and (min-width:$tablet){
         margin-top: 32px; 
-        margin-left:366px;
-       
+        margin-left:386px;
+        @media screen and (min-width:$desktop){
+            margin-top: 54px; 
+            margin-left:600px;
+        }
+        
     }
 }
 .about__icon{
     margin-left: 4px;
 }
 
-// .about__thumb{
-// display: flex;
-//    justify-content: center;
-// }
