@@ -5,15 +5,15 @@
     padding-top: 0;
 
     @media screen and (max-width: calc($tablet - 1px)) {
-        padding-bottom: 64px;        
+        padding-bottom: 32px;        
     }
 
     @media screen and (min-width: $tablet) {
-        padding-bottom: 204px;                
+        padding-bottom: 60px;                
     }
 
     @media screen and (min-width: $desktop) {
-        padding-bottom: 174px;        
+        padding-bottom: 80px;        
     }
 }
 
