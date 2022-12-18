@@ -1,4 +1,4 @@
-.backdrop {
+.backdrop-location {
     position: fixed;
     top: 0;
     left: 0;
@@ -41,7 +41,7 @@
 
 
 
-    .backdrop.is-hidden & {
+    .backdrop-location.is-hidden & {
         transform: translate(-50%, -50%) scale(1.1);
         opacity: 0;
     }
