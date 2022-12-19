@@ -26,7 +26,7 @@ body {
 
   // desktop screen
   @media screen and (min-width: $desktop) {
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-image: url(../images/common/backgroud_l@1x.jpg);
 
     // desktop screen retina
