@@ -1,4 +1,4 @@
-.backdrop {
+.backdrop-location {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,6 +12,8 @@
     pointer-events: initial;
     visibility: visible;
 
+   
+
     &.is-hidden {
         opacity: 0;
         pointer-events: none;
@@ -19,7 +21,7 @@
     }
 }
 
-.modal-franshise {
+.modal-location {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,24 +38,29 @@
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 
-    transition: transform 250ms $timingFunction,
+    
+
+    transition: transform 300ms $timingFunction,
         opacity 250ms $timingFunction;
 
 
 
-    .backdrop.is-hidden & {
-        transform: translate(-50%, -50%) scale(1.1);
+    .backdrop-location.is-hidden & {
+    
+        transform: translate(-50%, -50%) scale(1.1) skew(30deg);
         opacity: 0;
+        
+        
     }
 
     @media screen and (min-width:$tablet){
        max-width: 568px;
-       padding: 32px 58px;
+       padding: 32px 60px;
 
     }   
 }
 
-.modal-franshise__close {
+.modal-location__close {
     position: absolute;
     top: 12px;
     right: 12px;
@@ -75,14 +82,15 @@
     &:hover,
     &:focus {
         color: $accentColor;
+        
     }
 }
 
-.modal-franshise__icon {
+.modal-location__icon {
     fill: currentColor;
 }
 
-.modal-franshise__title {
+.modal-location__title {
     margin-bottom: 20px;
     
 
@@ -95,89 +103,61 @@
     @media screen and (min-width:$tablet){
         margin-left: 60px;
         margin-right: 60px;
-        margin-bottom: 24px;
+        margin-bottom: 32px;
 
         font-size: 20px;
         line-height: calc(28/20);
     }   
 }
-.modal-franshise__text {
-    font-family: $mainFont;
-    font-size: 14px;
-    line-height: calc(20/14);
-    color: $secondaryColor;
 
-    @media screen and (min-width:$tablet){
-        font-size: 16px;
-        line-height: calc(22/16);
-    }  
-}
-
-.form-franshise{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-}
-
-.form-franshise__group {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width:100%;
-    margin: 24px auto;
-
-
-    @media screen and (min-width:$tablet){
-        margin: 32px auto;
-        gap: 16px;
-        padding-left: 40px;
-        padding-right: 40px; 
-    }  
+.btn--link {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
     
-}
-
-.form-franshise__input,
-.form-franshise__message {
+    justify-content: center;
+    max-width: 134px;
     width: 100%;
-    // max-width:448px;
-    margin: 0;
-    padding: 8px 12px;
-    border: 1px solid $bgGreenColor;
-    border-radius: 10px;
-    outline: transparent;
-    background-color: $bgModalColor;
-    transition: border-color 250ms $timingFunction;
-}
 
-.form-franshise__input {
-    height: 32px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+    display: flex;
+    align-items: center;
+    text-align: center;
 
-    &:focus {
-        border-color: $accentColor;
-    }
+    color: #131313;
 
-    @media screen and (min-width:$tablet){
-        height: 42px;
-    }  
-}
-
-.form-franshise__message {
-    resize: none;
-    height: 64px;
-
-    @media screen and (min-width:$tablet){
-        height: 84px;
-    }  
-
-    &::placeholder {
-        line-height: calc(20/14);
-        color: $secondaryColor;
-    }
-    &:focus {
-        border-color: $accentColor;
+    @media screen and (min-width: $tablet) {
+        margin-top: 32px;
+        min-width: 145px;
+        font-size: 14px;
+        padding: 0;
     }
 }
+
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:199px;
+
+    @media screen and (min-width: $tablet) {
+        height:260px; 
+    }
+  }
+  .map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+
+
 
 
 
