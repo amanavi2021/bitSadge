@@ -1,6 +1,5 @@
 .about {
     background-color: $bgGreenColor;
-    // position: relative;
     padding-top: 60px;
     padding-bottom: 50px;
 
@@ -129,12 +128,6 @@
 
 }
 
-// .about__text--first{
-//      @media screen and (min-width:$tablet) {  
-//         width: 334px;
-//         }
-// }
-
 .about__text--second {
     line-height: 1.62;
     letter-spacing: 0;
@@ -205,3 +198,4 @@
     margin-left: 4px;
     fill: currentColor;
 }
+
