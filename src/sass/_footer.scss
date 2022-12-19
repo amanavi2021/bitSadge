@@ -232,6 +232,11 @@
         
         fill: $mainColor;
     }
+
+    &__link:hover, 
+    &__link:focus{
+        cursor: url(../images/pointer.png), auto;
+    }
 }
  
 
