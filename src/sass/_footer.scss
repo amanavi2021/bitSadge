@@ -178,6 +178,12 @@
     &__tel:focus {
         color:$accentColor;
     }
+
+    &__tel:hover,
+        &__tel:focus,
+        &__tel:active{
+                cursor: url(../images/pointer.png), auto;
+            }
 }
 
 .container--footer {
