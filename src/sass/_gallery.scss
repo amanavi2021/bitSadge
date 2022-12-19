@@ -1,0 +1,53 @@
+
+
+.gallery{
+    
+    background-image: linear-gradient(
+    to bottom,
+    $bgGreenColor 15%,
+    transparent 15%
+  );
+}
+  .gallery-box{
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (max-width: calc($tablet - 0.02px)) {
+        max-width: 480px;
+        padding: 0 20px 80px 20px;
+      }
+    
+      @media screen and (min-width: $tablet) {
+        width: 768px;
+        padding: 0 32px 100 32px;
+      }
+    
+      @media screen and (min-width: $desktop) {
+        width: 1200px;
+        padding: 0 94px 140px 93px;
+      }
+}
+
+.images{
+  
+display: block;
+border-radius: 24px;
+}
+
+.gallery-img{
+  
+    @media screen and (max-width: calc($tablet - 0.02px)) {
+        top: -32px;
+        left: 20px;
+      }
+    
+      @media screen and (min-width: $tablet) {
+        top: -144px;
+        left: 32px;
+      }
+    
+      @media screen and (min-width: $desktop) {
+        top: -98px;
+        left: 93px;
+      }
+}
