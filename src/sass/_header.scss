@@ -1,8 +1,20 @@
+button {
+   padding: 0;
+   border: none;
+   font: inherit;
+   color: inherit;
+   background-color: transparent;
+   cursor: pointer;
+}
+
 .header {
    height: 90px;
    background-color: $bgGreenColor;
    margin-left: auto;
    margin-right: auto;
+   position: sticky;
+   top: 0;
+   z-index: 999;
    // @media (min-width:1200px) {
    //  max-width: 1168px;
    // }
@@ -102,7 +114,10 @@
    }
    &__nav-menu-yellow {
     fill: #FFFFFF;
-
+    @media (min-width:479px) and (max-width:480px) {
+      position: absolute;
+      right: -200px;
+    }
    }
    &__nav {
 
@@ -115,7 +130,7 @@
         position: absolute;
         right: 20px;
     }
-    @media (min-width:480px) and (max-width:768px) {
+    @media (min-width:479px) and (max-width:768px) {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -199,7 +214,7 @@
             transition: transform 250ms ease-in-out;
 
    @media (min-width:320px) and (max-width:480px) {
-      max-width: 320px;
+      max-width: 480px;
       max-height: 568px;
       display: flex;
       justify-content: center;
@@ -219,7 +234,8 @@
       fill: #FCFCFC;
       @media (min-width:480px) and (max-width:768px) {
       position: absolute;
-      right: 32px;
+      top: 16px;
+      right: 20px;
       }
       @media (min-width:320px) and (max-width:479px) {
       position: absolute;
