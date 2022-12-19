@@ -30,7 +30,6 @@
     background-color: $mainColor;
     @include tablet {
     padding: 32px 60px;
-    height: 449px;
     max-width: 528px;
     }
     &__title {
