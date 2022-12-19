@@ -1,0 +1,9 @@
+.hero__icecreams-img{
+animation: rotate 15s linear 1s infinite;}
+
+
+ @keyframes rotate {
+     100% {
+         transform: rotate(360deg);
+     }
+ }

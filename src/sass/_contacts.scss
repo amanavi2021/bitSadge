@@ -1,0 +1,203 @@
+.contacts {
+  background-image: linear-gradient(
+    to top,
+    $bgGreenColor 72%,
+    transparent 72%,
+    transparent 100%);
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+    to top,
+    $bgGreenColor 44%,
+    transparent 44%,
+    transparent 100%);
+    }
+   @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(
+    to top,
+    $bgGreenColor 77%,
+    transparent 77%,
+    transparent 100%);
+    }
+
+}
+.company-contacts {
+  
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    gap: 16px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+.company-contacts__item {
+
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 24px;
+
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+  background-color: $mainColor;
+
+  @media screen and (max-width: 767.88px) {
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 16px * 2) / 3);
+    padding: 40px 24px;
+  }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 32px * 2) / 3);
+      padding: 40px;
+    }
+  }
+
+.representation {
+
+  display: inline-block;
+
+  margin: o;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 4px 22px;
+
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $secondaryColor;
+  background-color: $accentColor;
+
+  @media screen and (min-width: $tablet) {
+
+    margin-bottom: 32px;
+    padding: 4px 14px;
+    line-height: 1.4;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+}
+
+.representation__city {
+
+  font-weight: 500;
+  line-height: 1.86;
+  font-size: 12px;
+  color: $secondaryColor;
+
+  margin: 0;
+  margin-bottom: 8px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+}
+.representation__city--address {
+
+  font-weight: 500;
+  line-height: 1.83;
+  font-size: 12px;
+  font-style: normal;
+  color: #d6936d;
+  
+  display: block;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 24px;
+  margin: 0;
+  margin-bottom: 24px;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+}
+
+.representation__work {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+}
+.representation__work-item {
+  margin-bottom: 8px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 12px;
+  }
+}
+.representation__work-item:last-child {
+  margin-bottom: 0px;
+}
+.representation__work-day,
+.representation__work-time {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  color: $secondaryColor;
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+}
+.representation__work-time {
+  color: $disabledGreyColor;
+}
+.representation__tel,
+.representation__link {
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+  color: $secondaryColor;
+  display: block;
+
+  &:hover,  &:focus {
+    color: $accentColor;
+  }
+
+
+transition: color 250ms $timingFunction;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+}
+
+.representation__tel {
+  margin-bottom: 6px;
+  @media screen and (min-width: $tablet) {
+  margin-bottom: 4px;
+  }
+}

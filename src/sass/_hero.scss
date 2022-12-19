@@ -1,0 +1,236 @@
+.hero {
+  background-color: $bgGreenColor;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    background-image: url(../images/hero/dots/mobile.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      // justify-content: flex-start;
+      background-image: url(../images/hero/dots/tablet.png);
+    }
+    @media screen and (min-width: $desktop) {
+      background-image: url(../images/hero/dots/desktop.png);
+    }
+  }
+  &__title-block {
+    padding-top: 50px;
+    width: 247px;
+
+    @media screen and (min-width: $tablet) {
+      padding-top: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-top: 45px;
+      width: 367px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: Seymour One;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    font-size: 26px;
+    line-height: calc(48 / 38);
+
+    color: $mainColor;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 38px;
+    }
+
+    &-passion {
+      font-size: 34px;
+      @media screen and (min-width: $desktop) {
+        font-size: 38px;
+      }
+    }
+  }
+
+  &__btns {
+    margin-top: 32px;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @media screen and (min-width: $tablet) {
+      margin-top: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      margin-top: 28px;
+    }
+  }
+
+  &__link {
+    color: $accentColor;
+
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px calc(17 / 14);
+    letter-spacing: 0em;
+    text-align: center;
+
+    text-decoration: underline;
+
+    @media screen and (min-width: $desktop) {
+      padding: 12px 22px;
+      font-size: 14px;
+    }
+  }
+
+  &__link:hover {
+    color: $hoverGreenColor;
+  }
+
+  &__link:focus {
+    color: $mainColor;
+  }
+
+  &__link:disabled {
+    color: $disabledGreyColor;
+  }
+
+  &__link:hover,
+  &__link:focus{
+    cursor: url(../images/pointer.png), auto;
+            }
+  
+
+  &__icecreams {
+    display: none;
+    align-items: center;
+
+    margin-top: 12px;
+    padding-bottom: 12px;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+    }
+
+    &-img {
+      width: 152px;
+      z-index: 1;
+
+      @media screen and (min-width: $desktop) {
+        margin-top: 42px;
+        adding-bottom: 65px;
+        width: 250px;
+      }
+    }
+
+    &-text {
+      // position: relative;
+      width: 139px;
+
+      margin-left: 16px;
+
+      font-size: 12px;
+      line-height: calc(17 / 12);
+      font-weight: 400;
+      letter-spacing: 0em;
+
+      color: $mainColor;
+
+      // z-index: 1;
+
+      @media screen and (min-width: $desktop) {
+        width: 200px;
+        font-size: 14px;
+      }
+    }
+
+    //IT DOESNT WORK, SEND HELP
+    &-text::after {
+      content: url(../images/hero/arrow.png);
+      display: block;
+
+      width: 40px;
+      height: 16px;
+
+      margin-top: 12px;
+
+      @media screen and (min-width: $desktop) {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  &__main-img {
+    width: 177px;
+    // z-index: 1;
+
+    margin-top: 26px;
+
+    @media screen and (min-width: $tablet) {
+      width: 268px;
+      position: absolute;
+      bottom: 0;
+      right: 92px;
+
+      margin-top: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 456px;
+    }
+  }
+
+  &__cafes {
+    display: none;
+    position: absolute;
+    top: 53px;
+    right: 16px;
+    text-align: right;
+    // z-index: 1;
+
+    @media screen and (min-width: $tablet) {
+      display: block;
+    }
+
+    &-title {
+      font-size: 28px;
+      font-weight: 900;
+      line-height: calc(56 / 46);
+      letter-spacing: 0.04em;
+
+      color: $secondaryColor;
+
+      @media screen and (min-width: $desktop) {
+        font-size: 46px;
+      }
+    }
+
+    &-text {
+      font-size: 8px;
+      font-weight: 400;
+      line-height: calc(17 / 14);
+      letter-spacing: 0em;
+
+      color: $mainColor;
+
+      @media screen and (min-width: $desktop) {
+        font-size: 14px;
+      }
+    }
+  }
+  // &__dots {
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 0;
+  //   width: $desktop;
+  //   // height: 384px;
+  //   z-index: 0;
+
+  //   fill: $accentColor;
+  // }
+}
