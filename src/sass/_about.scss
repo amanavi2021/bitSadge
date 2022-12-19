@@ -15,8 +15,8 @@
     }
 }
 
-.about__container{
-    position: relative;  
+.about__container {
+    position: relative;
 }
 
 
@@ -38,11 +38,11 @@
         padding-left: 0;
         padding-right: 0;
         font-weight: 800;
-        font-size: 22px;     
+        font-size: 22px;
     }
 
     @media screen and (min-width:$desktop) {
-        font-size: 30px;     
+        font-size: 30px;
     }
 
 
@@ -71,7 +71,7 @@
     }
 
     @media screen and (min-width:$desktop) {
-        font-size: 36px;     
+        font-size: 36px;
     }
 
 }
@@ -199,20 +199,24 @@
     fill: currentColor;
 }
 
+// Modal-video
+
 .backdrop-video {
-     background-color: rgba(0, 0, 0, 0.2);
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     opacity: 1;
-     transition: opacity $timingFunction,
-     visibility $timingFunction;
-     &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 10;
+    transition: opacity $timingFunction,
+        visibility $timingFunction;
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
     }
 }
 
@@ -223,45 +227,69 @@
     transform: translate(-50%, -50%);
 
     overflow: hidden;
-    width: 100vw;
-    max-height: 100vh;
+    // width: 100vw;
+    max-width: 280px;
+    // max-height: 100vh;
     padding: 28px;
     border: 2px solid $accentColor;
+    z-index: 100;
     border-radius: 10px;
     background-color: $mainColor;
-    @include tablet {
-    padding: 32px 60px;
-    max-width: 528px;
+
+    @media screen and (min-width: $tablet) {
+        padding: 32px 60px;
+        max-width: 568px;
     }
+
     &__title {
-margin-bottom: 32px;
-font-weight: 400;
-font-size: 20px;
-line-height: 1.4;
-color: $secondaryColor;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family:$secondaryFont;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: center;
+        color: $secondaryColor;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 32px;  
+            font-size: 20px;
+        }
+    }
 }
-}
+
 .video {
     position: relative;
     aspect-ratio: 16 / 9;
+    width: px;
+    border-radius: 10px;
 
-&__text {
-font-weight: 400;
-line-height: 1.4;
-font-size: 16px;
-margin-top: 20px;
-color: $secondaryColor;
-@include tablet {
-margin-top: 32px;
-  }
-}
-& iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+    @media screen and (min-width: $tablet) {
+        width: 448px;
+    }
+
+    &__text {
+        font-weight: 400;
+        line-height: 1.4;
+        font-size: 14px;
+        margin-top: 20px;
+        color: $secondaryColor;
+
+        @media screen and (min-width: $tablet) {
+            margin-top: 32px;
+            font-size: 16px;
+        }
+    }
+
+    & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
 }
 
 .btn-close {
@@ -282,5 +310,11 @@ margin-top: 32px;
 }
 
 .close {
-    fill: #000;;
+    fill: #000;
+
+    .btn-close:hover &,
+    .btn-close:focus & {
+            fill: $accentColor;
+            cursor: url(../images/pointer.png), auto;
+        }
 }
