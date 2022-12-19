@@ -122,6 +122,9 @@
   padding-bottom: 24px;
   margin: 0;
   margin-bottom: 24px;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
