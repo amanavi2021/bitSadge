@@ -1,15 +1,34 @@
 <header class="header">
-   <div class="header__container">
+   <div class="container header__container">
       <ul class="header__items">
          <li class="header__item">
             <div class="header__logo">
-               <img alt="" src="#" class="header__logo-img">
+
+               <picture>
+                  <source media="(min-width: 1200px)" 
+                  srcset="./images/header/logo_l@1x.png 1x, ./images/header/logo_l@2x.png 2x">
+                  <source media="(min-width: 768px)" 
+                  srcset="./images/header/logo_m@1x.png 1x, ./images/header/logo_m@2x.png 2x">
+                  <source media="(max-width: 767px)" 
+                  srcset="./images/header/logo_s@1x.png 1x, ./images/header/logo_s@2x.png 2x">
+                  <img class="header__logo-img" src="./images/header/logo_s@1x.png" alt="Logo" loading="lazy">
+                </picture>
+               <!-- <img
+               class="header__logo-img"
+               srcset="./images/header/logo-l@1x.png 1x, ./images/header/logo-l@1x.png 2x"
+               src="./images/comments/user_1@1x.webp"
+               alt="user"
+               width="85px"
+               height="85px"
+             /> -->
+               <!-- <img alt="" src="#" class="header__logo-img">
+               
                <svg class="header__logo-item" width="60" height="65">
                   <use
                     class="header__logo-item"
                     href="./images/icons.svg#icon-logo"
                   ></use>
-                </svg>
+                </svg> -->
             </div>
          </li>
          <li class="header__item">
@@ -29,7 +48,7 @@
              </svg>
            </button>
                   </li>
-                  <li class="#header__nav-item">
+                  <li class="header__nav-item">
                      <a href="Home" class="header__nav-link">
                         Home
                   </a>
