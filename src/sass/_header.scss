@@ -8,65 +8,31 @@ button {
 }
 
 .header {
-   height: 90px;
+   // height: 90px;
    background-color: $bgGreenColor;
    margin-left: auto;
    margin-right: auto;
+   padding-bottom: 10px;
    position: sticky;
    top: 0;
    z-index: 999;
-   // @media (min-width:1200px) {
-   //  max-width: 1168px;
-   // }
-   // @media (min-width:769px) and (max-width:1199px) {
-   //  max-width: 768px;
-   // }
-   // @media (min-width:320px) and (max-width:768px) {
-   //  max-width: 768px;
-   // }
-   // &__container {
-   //  @media (max-width:480px) {
-   //      max-width: 480px;
-   //      margin-left: auto;
-   //      margin-right: auto;
-   //      padding-left: 20px;
-   //      padding-right: 20px;
-   //      justify-content: center;
-   //  }
-   //  @media (min-width:481px) and (max-width:768px) {
-   //      max-width: 768px;
-   //      margin-left: auto;
-   //      margin-right: auto;
-   //      padding-left: 32px;
-   //      padding-right: 32px;
-   //      justify-content: center;
-   //  }
-   //  @media (min-width:769px) {
-   //      max-width: 1200px;
-   //      margin-left: auto;
-   //      margin-right: auto;
-   //      padding-left: 16px;
-   //      padding-right: 16px;
-   //      justify-content: center;
-   //  }
-   // }
-   &__items {
+
+   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-   }
-   &__item {
-    @media (min-width:320px) and (max-width:768px) {
+    padding-top: 12px;
 
-    }
-    @media (min-width:769px) and (max-width:1199px) {
-        
-    }
-    @media (min-width:1200px) {
-        
-    }
+  @media screen and (min-width:$tablet) {
+   padding-top: 20px;
+  
    }
+   @media screen and (min-width:$desktop) {
+      padding-top: 8px;
+ 
+   }
+    }
+
    &__logo {
     position: relative;
     z-index: 999;
@@ -77,32 +43,29 @@ button {
     @media screen and (min-width:$tablet) {
         width: 48px;
         height: 44px;
+        margin-right: 440px;
     }
     @media screen and (min-width:$desktop) {
         width: 60px;
         height: 65px;
+        margin-right: 308px;
       //   margin-top: 18px;
     }
    }
-   // &__logo-img {
-   //  display: block;
-   //  max-width: 100%;
-   //  height: auto;
-//     @media (min-width:320px) and (max-width:768px) {
-//         background-image: url(./img/logo-mobile.jpg);
 
-//     }
-//     @media (min-width:769px) and (max-width:1199px) {
-//         background-image: url(../img/logo-tablet.jpg);
-//     }
-//     @media (min-width:1200px) {
-//         background-image: url(../img/logo-desctop.jpg);
-//     }
-   // }
    &__logo-item {
     fill:$accentColor;
    }
+
+   &__nav{
+     display: flex;
+     justify-content:center;
+     align-items: center;
+
+   }
+
    &__nav-menu {
+      display: block;
     @media (min-width:768px) and (max-width:320px) {
         
     }
@@ -112,34 +75,40 @@ button {
 
    }
    &__nav-menu-yellow {
-    fill: #FFFFFF;
-    @media (min-width:479px) and (max-width:480px) {
-      position: absolute;
-      right: -200px;
+    color: #FFFFFF;
+    display:block;
+    transition: color 250ms $timingFunction;
+    @media screen and (min-width:$tablet){
+      margin-right: 32px;
+    }
+    @media screen and (min-width:$desktop){
+   
+      display:none;
+    }
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
     }
    }
- 
+
+   .menu__burger {
+      fill: currentColor;
+  }
+  
+  
    &__nav-items {
-    @media (max-width:479px) {
+    
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: absolute;
-        right: 20px;
-    }
-    @media (min-width:479px) and (max-width:768px) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: absolute;
-        right: 215px;
-    }
+ 
     @media (min-width:769px) {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 28px;
-        margin-top: 40px;
+    
     }
    }
    &__nav-item {
@@ -162,15 +131,16 @@ button {
 
    }
    &__button--yellow {
-    @media (max-width:480px) {
-        display: none;
+      display: none;
+    @media screen and (min-width:$tablet) {
+        display: block;
     }
     @media (min-width:481px)  {
         width: 152px;
         height: 42px;
         border-radius: 10px;
         background-color: #F8D24E;
-        margin-top: 28px;
+      //   margin-top: 28px;
         &:hover {
         background-color: #0A8817;
         }
@@ -185,9 +155,9 @@ button {
     }
    }
    &__button-text {
-      font-family: 'Montserrat' serif;
-      font-style: normal;
-      font-size: 14px;
+      // font-family: 'Montserrat' serif;
+      // font-style: normal;
+      // font-size: 14px;
       font-weight: 600;
       line-height: 17px;
    }
@@ -227,6 +197,7 @@ button {
    @media (min-width:769px) {
       display: none;
    }
+
    &__close {
       fill: #FCFCFC;
       @media (min-width:480px) and (max-width:768px) {
@@ -239,8 +210,18 @@ button {
       right: 20px;
       top: 16px;
       }
+
+      transition: color 250ms $timingFunction;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}
       
-   }
+&__close-icon {
+   fill: currentColor;
+}
  
    &__items {
       text-align: center;

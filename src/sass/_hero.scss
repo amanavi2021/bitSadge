@@ -21,14 +21,14 @@
     }
   }
   &__title-block {
-    padding-top: 50px;
+    padding-top: 40px;
     width: 247px;
 
     @media screen and (min-width: $tablet) {
-      padding-top: 15px;
+      padding-top: 5px;
     }
     @media screen and (min-width: $desktop) {
-      padding-top: 45px;
+      padding-top: 35px;
       width: 367px;
     }
   }
