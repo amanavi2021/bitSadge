@@ -94,13 +94,15 @@
 .box__of__ingredients--items {
     width: 53px;
     height: 72px;
-    border: 2px solid #9CBE8F;
     border-radius: 40px;
 
     @media screen and (min-width:768px) {
         width: 65px;
         height: 90px;
     }
+}
+.box__of__ingredients--items-green {
+    border: 2px solid #9CBE8F;
 }
 .box__of__ingredients--digits {
     width: 43px;
