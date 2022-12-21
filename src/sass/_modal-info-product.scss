@@ -1,4 +1,7 @@
 // modal ingredients green
+.backdrop.is-hidden .modal-info__ingredients{
+    transform: translateX(-4000px);
+}
 .modal-info__ingredients-green{
     overflow-y: scroll;
     z-index: 50;
@@ -15,6 +18,9 @@
     background-color: $mainColor;
     border: 2px solid $accentColor;
     border-radius: 10px;
+    filter: blur(0);
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (max-width: 479px) {
             width: auto;
@@ -32,9 +38,6 @@
     background: none;
     padding: 0;
     line-height: 0;
-    transform: rotate(0deg);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 
     @media screen and (min-width:768px) {
