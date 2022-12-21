@@ -69,9 +69,9 @@ button {
    &__nav-menu {
       display: block;
 
-      @media (min-width:768px) and (max-width:320px) {}
+      @media screen and (min-width:768px) and (max-width:320px) {}
 
-      @media (min-width:769px) {
+      @media screen and (min-width:769px) {
          display: none;
       }
 
@@ -108,7 +108,7 @@ button {
       justify-content: space-between;
       align-items: center;
 
-      @media (min-width:769px) {
+      @media screen and (min-width:$tablet) {
          display: flex;
          justify-content: center;
          align-items: center;
@@ -127,7 +127,7 @@ button {
    }
 
    &__nav-link {
-      font-family: 'Montserrat' serif;
+      // font-family: 'Montserrat' serif;
       font-size: 16px;
       font-weight: 700;
       font-style: normal;
@@ -148,7 +148,7 @@ button {
          display: block;
       }
 
-      @media (min-width:481px) {
+      @media screen and (min-width:481px) {
          width: 152px;
          height: 42px;
          border-radius: 10px;
@@ -161,8 +161,8 @@ button {
 
          &:focus {
             background-color: #0A8817;
-            color: #FCFCFC;
-            fill: #FCFCFC;
+            color:$mainColor;
+            fill: $mainColor;
          }
 
          &:active:disabled {
@@ -172,9 +172,6 @@ button {
    }
 
    &__button-text {
-      // font-family: 'Montserrat' serif;
-      // font-style: normal;
-      // font-size: 14px;
       font-weight: 600;
       line-height: 17px;
    }
@@ -203,26 +200,26 @@ button {
    transition: transform 250ms ease-in-out;
 
 
-   @media (min-width:481px) and (max-width:768px) {
+   @media screen and (min-width:481px) and (max-width:768px) {
     
       padding: 20px 32px;
       background-color: #97AF8D;
    }
 
-   @media (min-width:769px) {
+   @media screen and (min-width:$tablet) {
       display: none;
    }
 
    &__close {
-      fill: #FCFCFC;
+      fill: $mainColor;
 
-      @media (min-width:480px) and (max-width:768px) {
+      @media screen and (min-width:480px) and (max-width:768px) {
          position: absolute;
          top: 16px;
          right: 20px;
       }
 
-      @media (min-width:320px) and (max-width:479px) {
+      @media screen and (min-width:320px) and (max-width:479px) {
          position: absolute;
          right: 20px;
          top: 16px;
@@ -243,7 +240,7 @@ button {
    &__items {
       text-align: center;
 
-      @media (min-width:480px) and (max-width:768px) {
+      @media screen and (min-width:480px) and (max-width:768px) {
          padding-top: 140px;
       }
 
@@ -254,17 +251,17 @@ button {
    }
 
    &__link {
-      font-family: 'Montserrat';
-      font-style: normal;
+      // font-family: 'Montserrat';
+      // font-style: normal;
       font-weight: 700;
-      color: #FCFCFC;
+      color: $mainColor;
 
-      @media (min-width:480px) and (max-width:768px) {
+      @media screen and (min-width:480px) and (max-width:768px) {
          font-size: 48px;
          line-height: 59px;
       }
 
-      @media (min-width:320px) and (max-width:479px) {
+      @media screen and (min-width:320px) and (max-width:479px) {
          font-size: 32px;
          line-height: 39px;
       }
@@ -272,12 +269,16 @@ button {
 
       &:hover,
       &:focus {
-         color: #131313;
+         color: $secondaryColor;
+      }
+
+      &:active .modal-menu{
+         transform: translateX(100%);
       }
    }
 
    &__button-buy {
-      @media (min-width:320px) and (max-width:479px) {
+      @media screen and (min-width:320px) and (max-width:479px) {
          width: 152px;
          height: 42px;
          border-radius: 10px;
@@ -294,7 +295,7 @@ button {
 
          &:focus {
             background-color: #0A8817;
-            color: #FCFCFC;
+            color: $mainColor;
          }
 
          &:active:disabled {
@@ -303,7 +304,7 @@ button {
 
       }
 
-      @media (min-width:480px) and (max-width:768px) {
+      @media screen and (min-width:480px) and (max-width:768px) {
          display: none;
       }
    }
