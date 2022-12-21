@@ -8,153 +8,169 @@ button {
 }
 
 .header {
-   // height: 90px;
+   
    background-color: $bgGreenColor;
    margin-left: auto;
    margin-right: auto;
    padding-bottom: 10px;
-   position: sticky;
-   top: 0;
+   // position: sticky;
+   // top: 0;
    z-index: 999;
 
    &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 12px;
 
-  @media screen and (min-width:$tablet) {
-   padding-top: 20px;
-  
+      @media screen and (min-width:$tablet) {
+         padding-top: 20px;
+
+      }
+
+      @media screen and (min-width:$desktop) {
+         padding-top: 8px;
+
+      }
    }
-   @media screen and (min-width:$desktop) {
-      padding-top: 8px;
- 
-   }
-    }
 
    &__logo {
-    position: relative;
-    z-index: 999;
-    width: 40px;
-    height: 37px;
-        
-    
-    @media screen and (min-width:$tablet) {
-        width: 48px;
-        height: 44px;
-        margin-right: 440px;
-    }
-    @media screen and (min-width:$desktop) {
-        width: 60px;
-        height: 65px;
-        margin-right: 308px;
-      //   margin-top: 18px;
-    }
+      position: relative;
+      z-index: 999;
+      width: 40px;
+      height: 37px;
+
+
+      @media screen and (min-width:$tablet) {
+         width: 48px;
+         height: 44px;
+         margin-right: 440px;
+      }
+
+      @media screen and (min-width:$desktop) {
+         width: 60px;
+         height: 65px;
+         margin-right: 308px;
+         //   margin-top: 18px;
+      }
    }
 
    &__logo-item {
-    fill:$accentColor;
+      fill: $accentColor;
    }
 
-   &__nav{
-     display: flex;
-     justify-content:center;
-     align-items: center;
+   &__nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
    }
 
    &__nav-menu {
       display: block;
-    @media (min-width:768px) and (max-width:320px) {
-        
-    }
-    @media (min-width:769px) {
-        display: none;
-    }
+
+      @media (min-width:768px) and (max-width:320px) {}
+
+      @media (min-width:769px) {
+         display: none;
+      }
 
    }
-   &__nav-menu-yellow {
-    color: #FFFFFF;
-    display:block;
-    transition: color 250ms $timingFunction;
-    @media screen and (min-width:$tablet){
-      margin-right: 32px;
-    }
-    @media screen and (min-width:$desktop){
-   
-      display:none;
-    }
 
-    &:hover,
-    &:focus {
-        color: $accentColor;
-    }
+   &__nav-menu-yellow {
+      color: #FFFFFF;
+      display: block;
+      transition: color 250ms $timingFunction;
+
+      @media screen and (min-width:$tablet) {
+         margin-right: 32px;
+      }
+
+      @media screen and (min-width:$desktop) {
+
+         display: none;
+      }
+
+      &:hover,
+      &:focus {
+         color: $accentColor;
+      }
    }
 
    .menu__burger {
       fill: currentColor;
-  }
-  
-  
-   &__nav-items {
-    
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
- 
-    @media (min-width:769px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 28px;
-    
-    }
    }
+
+
+   &__nav-items {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media (min-width:769px) {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 28px;
+
+      }
+   }
+
    &__nav-item {
       display: none;
-    @media screen and (min-width:$desktop) {
-        display: block;
-    }
+
+      @media screen and (min-width:$desktop) {
+         display: block;
+      }
 
    }
+
    &__nav-link {
-    font-family: 'Montserrat' serif;
-    font-size: 16px;
-    font-weight: 700;
-    font-style: normal;
-    line-height: 1.25;
-    color: #FCFCFC;
-    &:hover,
-    &:focus {
-        color: #F8D24E;
-    }
+      font-family: 'Montserrat' serif;
+      font-size: 16px;
+      font-weight: 700;
+      font-style: normal;
+      line-height: 1.25;
+      color: #FCFCFC;
+
+      &:hover,
+      &:focus {
+         color: #F8D24E;
+      }
 
    }
+
    &__button--yellow {
       display: none;
-    @media screen and (min-width:$tablet) {
-        display: block;
-    }
-    @media (min-width:481px)  {
-        width: 152px;
-        height: 42px;
-        border-radius: 10px;
-        background-color: #F8D24E;
-      //   margin-top: 28px;
-        &:hover {
-        background-color: #0A8817;
-        }
-        &:focus {
-        background-color: #0A8817;
-        color: #FCFCFC;
-        fill: #FCFCFC;
-        }
-        &:active:disabled {
-        background-color: #ABABAB;
-        }
-    }
+
+      @media screen and (min-width:$tablet) {
+         display: block;
+      }
+
+      @media (min-width:481px) {
+         width: 152px;
+         height: 42px;
+         border-radius: 10px;
+         background-color: #F8D24E;
+
+         //   margin-top: 28px;
+         &:hover {
+            background-color: #0A8817;
+         }
+
+         &:focus {
+            background-color: #0A8817;
+            color: #FCFCFC;
+            fill: #FCFCFC;
+         }
+
+         &:active:disabled {
+            background-color: #ABABAB;
+         }
+      }
    }
+
    &__button-text {
       // font-family: 'Montserrat' serif;
       // font-style: normal;
@@ -162,93 +178,92 @@ button {
       font-weight: 600;
       line-height: 17px;
    }
+
    &__button-icon {
-    fill:currentColor;
+      fill: currentColor;
    }
 }
 
 .modal-menu {
-   
-   position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            padding: 32px 0 32px 0;
-            background-color: var(--white-color);
-            z-index: 990;
-        
-            transform: translateX(100%);
-            transition: transform 250ms ease-in-out;
 
-   @media (min-width:320px) and (max-width:480px) {
-      max-width: 480px;
-      max-height: 568px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #85A279;
-   }
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #85A279;
+
+   padding: 32px 0 32px 0;
+   z-index: 990;
+
+   transform: translateX(100%);
+   transition: transform 250ms ease-in-out;
+
+
    @media (min-width:481px) and (max-width:768px) {
-      max-width: 768px;
-      max-height: 1024px;
+    
       padding: 20px 32px;
       background-color: #97AF8D;
    }
+
    @media (min-width:769px) {
       display: none;
    }
 
    &__close {
       fill: #FCFCFC;
+
       @media (min-width:480px) and (max-width:768px) {
-      position: absolute;
-      top: 16px;
-      right: 20px;
+         position: absolute;
+         top: 16px;
+         right: 20px;
       }
+
       @media (min-width:320px) and (max-width:479px) {
-      position: absolute;
-      right: 20px;
-      top: 16px;
+         position: absolute;
+         right: 20px;
+         top: 16px;
       }
 
       transition: color 250ms $timingFunction;
 
-    &:hover,
-    &:focus {
-        color: $accentColor;
-    }
-}
-      
-&__close-icon {
-   fill: currentColor;
-}
- 
+      &:hover,
+      &:focus {
+         color: $accentColor;
+      }
+   }
+
+   &__close-icon {
+      fill: currentColor;
+   }
+
    &__items {
       text-align: center;
 
       @media (min-width:480px) and (max-width:768px) {
          padding-top: 140px;
       }
-      @media (min-width:320px) and (max-width:479px) {
-         // padding-top: 100px;
-      }
-      
-      
+
    }
- 
+
    &__item:not(:last-child) {
       padding-bottom: 40px;
    }
+
    &__link {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 700;
       color: #FCFCFC;
+
       @media (min-width:480px) and (max-width:768px) {
          font-size: 48px;
          line-height: 59px;
       }
+
       @media (min-width:320px) and (max-width:479px) {
          font-size: 32px;
          line-height: 39px;
@@ -260,6 +275,7 @@ button {
          color: #131313;
       }
    }
+
    &__button-buy {
       @media (min-width:320px) and (max-width:479px) {
          width: 152px;
@@ -271,25 +287,29 @@ button {
          line-height: 17px;
          position: absolute;
          bottom: 64px;
-         &:hover{
+
+         &:hover {
             background-color: #0A8817;
          }
+
          &:focus {
             background-color: #0A8817;
             color: #FCFCFC;
          }
+
          &:active:disabled {
             background-color: #ABABAB;
          }
-         
+
       }
+
       @media (min-width:480px) and (max-width:768px) {
          display: none;
       }
    }
 
    &__button-buy-arrow {
-      fill:currentColor;
+      fill: currentColor;
 
    }
 
