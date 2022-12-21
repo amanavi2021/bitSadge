@@ -14,15 +14,11 @@
     border-radius: 10px;
 
     @media screen and (max-width: 479px) {
-        .modal-info__ingredients{
             width: auto;
             height: auto;
-        }
     }
     @media screen and (min-width: 768px){
-        .modal-info__ingredients {
             width: 568px;
-        }
     }
 }
 .modal-info__ingredients--close-btn{
