@@ -233,6 +233,7 @@
     font-size: 14px;
     font-weight: 600;
     line-height: calc(17 / 14);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover {
         background-color: $hoverGreenColor;
@@ -246,7 +247,6 @@
         min-width: 120px;
     }
 }
-
 // modal ingredients yellow
 .ingredients__img--yellow {
     background:  linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7));
@@ -256,7 +256,6 @@
     background-image: url(../images/products/ice-coffe.png);
     z-index: 110;
     background-size: cover;
-
 }
 .box__of__ingredients--items-yellow{
     border: 2px solid #EDD276;
@@ -264,5 +263,24 @@
 .box__of__ingredients--digits-yellow {
     background-color: #EDD276;
     background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7));
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+// modal ingredients brown
+.ingredients__img--brown {
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7));
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+}
+.ingredients__img--brown::after {
+    background-image: url(../images/products/milkshake.png);
+    z-index: 120;
+    background-size: cover;
+}
+.box__of__ingredients--items-brown {
+    border: 2px solid #D6936D;
+}
+.box__of__ingredients--digits-brown {
+    background-color: #D6936D;
+    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7));
     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
 }
