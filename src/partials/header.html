@@ -1,2 +1,101 @@
 <header class="header">
+   <div class="container header__container">
+      <div class="header__logo">
+         <picture>
+            <source media="(min-width: 1200px)" 
+            srcset="./images/header/logo_l@1x.png 1x, ./images/header/logo_l@2x.png 2x">
+            <source media="(min-width: 768px)" 
+            srcset="./images/header/logo_m@1x.png 1x, ./images/header/logo_m@2x.png 2x">
+            <source media="(max-width: 767px)" 
+            srcset="./images/header/logo_s@1x.png 1x, ./images/header/logo_s@2x.png 2x">
+            <img class="header__logo-img" src="./images/header/logo_s@1x.png" alt="Logo" loading="lazy">
+          </picture>
+      </div>
+      <nav class="header__nav">
+         <ul class="header__nav-items">
+            <li class="header__nav-item">
+               <a href="" class="header__nav-link">
+                  Home
+            </a>
+         </li>
+            <li class="header__nav-item">
+               <a href="#about" class="header__nav-link">
+                  How it’s made?
+               </a>
+         </li>
+            <li class="header__nav-item">
+               <a href="#products" class="header__nav-link">
+                  Our products
+            </a>
+         </li>
+            <li class="header__nav-item">
+               <a href="#contacts" class="header__nav-link">
+                  Contact
+               </a>
+            </li>
+         </ul>
+      </nav>
+      <button type="button" class="header__nav-menu-yellow js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="menu__burger" width="32" height="32">
+        <use
+          class="menu__icon"
+          href="./images/icons.svg#icon-menu"
+        ></use>
+      </svg>
+    </button>
+      <button type="button" class="btn btn__buy-now header__button--yellow" data-modal-open-buy>
+         <span class="header__button-text">Buy now</span> 
+         <svg class="header__button-icon" width="12" height="12">
+            <use
+              href="./images/icons.svg#icon-arrow_but"
+            ></use>
+          </svg>
+      </button>
+   </div>
 </header>
+ <!-- Мобільне меню -->
+<div class="modal-menu js-menu-container" id="mobile-menu">
+   <button class="modal-menu__close js-close-menu" type="button">
+      <svg class="modal-menu__icon" width="32" height="32">
+         <use
+           class="modal-menu__close-icon"
+           href="./images/icons.svg#icon-close"
+         ></use>
+       </svg>
+   </button>
+   <ul class="modal-menu__items">
+      <li class="modal-menu__item">
+         <a href="./index.html" class="modal-menu__link">
+            Home
+         </a>
+      </li>
+      <li class="modal-menu__item">
+         <a href="./index.html#about" class="modal-menu__link">
+            How it’s made?
+         </a>
+      </li>
+      <li class="modal-menu__item">
+         <a href="./index.html#products" class="modal-menu__link">
+            Our products
+         </a>
+      </li>
+      <li class="modal-menu__item">
+         <a href="./index.html#contacts" class="modal-menu__link">
+            Contact
+         </a>
+      </li>
+   </ul>
+   <!-- <button class="modal-menu__button-buy" type="button"> -->
+   <button type="button" class="btn btn__buy-now modal-menu__button-buy" data-modal-open-buy>
+      <span class="modal-menu__button-buy-text">Buy now</span>
+      <svg class="modal-menu__button-buy-arrow" width="12" height="12">
+         <use
+           class="modal-menu__button-buy-icon"
+           href="./images/icons.svg#icon-arrow_but"
+         ></use>
+       </svg>
+   </button>
+</div>

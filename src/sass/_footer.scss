@@ -2,6 +2,7 @@
     background-color: $bgGreenColor;
     padding-top: 20px;
     padding-bottom: 20px;
+    
 
     //tablet
     @media screen and (min-width: $tablet) {
@@ -178,6 +179,12 @@
     &__tel:focus {
         color:$accentColor;
     }
+
+    &__tel:hover,
+        &__tel:focus,
+        &__tel:active{
+                cursor: url(../images/pointer.png), auto;
+            }
 }
 
 .container--footer {
@@ -229,7 +236,13 @@
 
     &__link:hover .socials__icon, 
     &__link:focus .socials__icon {
+        
         fill: $mainColor;
+    }
+
+    &__link:hover, 
+    &__link:focus{
+        cursor: url(../images/pointer.png), auto;
     }
 }
  

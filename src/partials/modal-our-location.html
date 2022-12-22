@@ -1,29 +1,34 @@
 <!-- Модальне вікно -->
 <div class="backdrop-location is-hidden" data-modal-location>
-    <div class="modal-franshise">
-      <button class="modal-franshise__close" type="button" data-modal-location-close>
-        <svg class="modal-franshise__icon" width="13" height="13">
-          <use href="./images/icons.svg#icon-close_menu"></use>
-        </svg>
-      </button>
-      <p class="modal-franshise__title">Our Locations</p>
-      <p class="modal-franshise__text">Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.</p>         
-      <form class="form-franshise" autocomplete="off">
-        <div class="form-franshise__group">
-          <label class="form-franshise__field">
-            <input class="form-franshise__input" type="text" name="user-name" placeholder="Name">
-          </label>
-          <label class="form-franshise_field">
-            <input type="tel" class="form-franshise__input" name="user-phone" placeholder="Phone">
-          </label>
-          <label class="form-franshise_field">
-            <input type="email" class="form-franshise__input" name="user-mail" placeholder="Email">
-          </label>
-          <label class="form-franshise__field">
-            <textarea class="form-franshise__message" name="user-message" rows="6" placeholder="Comment"></textarea>
-          </label>
-        </div>    
-          <button class="btn" type="submit">Submit</button>
-      </form>
-    </div>
+
+  <div class="modal-location">
+    <button
+      class="modal-location__close"
+      type="button"
+      data-modal-location-close
+    >
+      <svg class="modal-location__icon" width="13" height="13">
+        <use href="./images/icons.svg#icon-close_menu"></use>
+      </svg>
+    </button>
+    <p class="modal-location__title">Our Location</p>
+
+    <div class="map-responsive">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21124.436156352716!2d34.5254716925902!3d49.58045203350618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d825e425e6ba6b%3A0xcf3e6bdfb9e4ca82!2sPoltava%2C%20Poltava%20Oblast%2C%2036000!5e0!3m2!1sen!2sua!4v1671366819609!5m2!1sen!2sua"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
   </div>
+  <a
+      class="btn btn--link"
+      target="_blank"
+      rel="norefrrer nopener nofollow"
+      href="https://www.google.com/maps/@13.7431908,100.5632536,15z"
+      >Open map</a
+    >
+</div>

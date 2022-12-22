@@ -1,6 +1,5 @@
 .about {
     background-color: $bgGreenColor;
-    // position: relative;
     padding-top: 60px;
     padding-bottom: 50px;
 
@@ -16,8 +15,8 @@
     }
 }
 
-.about__container{
-    position: relative;  
+.about__container {
+    position: relative;
 }
 
 
@@ -39,11 +38,11 @@
         padding-left: 0;
         padding-right: 0;
         font-weight: 800;
-        font-size: 22px;     
+        font-size: 22px;
     }
 
     @media screen and (min-width:$desktop) {
-        font-size: 30px;     
+        font-size: 30px;
     }
 
 
@@ -72,7 +71,7 @@
     }
 
     @media screen and (min-width:$desktop) {
-        font-size: 36px;     
+        font-size: 36px;
     }
 
 }
@@ -128,12 +127,6 @@
     }
 
 }
-
-// .about__text--first{
-//      @media screen and (min-width:$tablet) {  
-//         width: 334px;
-//         }
-// }
 
 .about__text--second {
     line-height: 1.62;
@@ -204,4 +197,124 @@
 .about__icon {
     margin-left: 4px;
     fill: currentColor;
+}
+
+// Modal-video
+
+.backdrop-video {
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 10;
+    transition: opacity $timingFunction,
+        visibility $timingFunction;
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    overflow: hidden;
+    // width: 100vw;
+    max-width: 280px;
+    // max-height: 100vh;
+    padding: 28px;
+    border: 2px solid $accentColor;
+    z-index: 100;
+    border-radius: 10px;
+    background-color: $mainColor;
+
+    @media screen and (min-width: $tablet) {
+        padding: 32px 60px;
+        max-width: 568px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family:$secondaryFont;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.4;
+        text-align: center;
+        color: $secondaryColor;
+
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 32px;  
+            font-size: 20px;
+        }
+    }
+}
+
+.video {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: px;
+    border-radius: 10px;
+
+    @media screen and (min-width: $tablet) {
+        width: 448px;
+    }
+
+    &__text {
+        font-weight: 400;
+        line-height: 1.4;
+        font-size: 14px;
+        margin-top: 20px;
+        color: $secondaryColor;
+
+        @media screen and (min-width: $tablet) {
+            margin-top: 32px;
+            font-size: 16px;
+        }
+    }
+
+    & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+.btn-close {
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    max-width: 24px;
+    max-height: 24px;
+    margin: 8px;
+    padding: 6px;
+    cursor: url(../images/pointer.png);
+    border: none;
+    background-color: $mainColor;
+}
+
+.close {
+    fill: #000;
+
+    .btn-close:hover &,
+    .btn-close:focus & {
+            fill: $accentColor;
+            cursor: url(../images/pointer.png), auto;
+        }
 }
