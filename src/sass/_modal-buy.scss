@@ -16,7 +16,7 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    z-index: 10;
+    z-index: 1000;
     transition: opacity 250ms linear, visibility 250ms linear;
     &.is-hidden {
         opacity: 0;
