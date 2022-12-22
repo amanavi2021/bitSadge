@@ -69,9 +69,7 @@ button {
    &__nav-menu {
       display: block;
 
-      @media screen and (min-width:768px) and (max-width:320px) {}
-
-      @media screen and (min-width:769px) {
+      @media screen and (min-width:$desktop) {
          display: none;
       }
 
@@ -108,7 +106,7 @@ button {
       justify-content: space-between;
       align-items: center;
 
-      @media screen and (min-width:$tablet) {
+      @media screen and (min-width:769px) {
          display: flex;
          justify-content: center;
          align-items: center;
@@ -173,7 +171,7 @@ button {
 
    &__button-text {
       font-weight: 600;
-      line-height: 17px;
+      line-height: calc(17/14);
    }
 
    &__button-icon {
@@ -189,42 +187,34 @@ button {
    width: 100vw;
    height: 100vh;
    display: flex;
-   justify-content: center;
+   flex-direction: column;
    align-items: center;
+   // align-items: center;
    background-color: #85A279;
 
-   padding: 32px 0 32px 0;
+   // padding: 32px 0 32px 0;
    z-index: 990;
 
    transform: translateX(100%);
    transition: transform 250ms ease-in-out;
 
 
-   @media screen and (min-width:481px) and (max-width:768px) {
-    
-      padding: 20px 32px;
+   @media screen and (min-width:$tablet) {
+      // padding: 20px 32px;
       background-color: #97AF8D;
    }
 
-   @media screen and (min-width:$tablet) {
+   @media screen and (min-width:$desktop) {
       display: none;
    }
 
    &__close {
       fill: $mainColor;
 
-      @media screen and (min-width:480px) and (max-width:768px) {
          position: absolute;
          top: 16px;
          right: 20px;
-      }
-
-      @media screen and (min-width:320px) and (max-width:479px) {
-         position: absolute;
-         right: 20px;
-         top: 16px;
-      }
-
+      
       transition: color 250ms $timingFunction;
 
       &:hover,
@@ -239,8 +229,10 @@ button {
 
    &__items {
       text-align: center;
+      padding-top: 100px;
+      padding-bottom: 110px;
 
-      @media screen and (min-width:480px) and (max-width:768px) {
+      @media screen and (min-width:$tablet) {
          padding-top: 140px;
       }
 
@@ -255,16 +247,15 @@ button {
       // font-style: normal;
       font-weight: 700;
       color: $mainColor;
+      font-size: 32px;
+      line-height: calc(39/32);
 
-      @media screen and (min-width:480px) and (max-width:768px) {
+      @media screen and (min-width:$tablet) {
          font-size: 48px;
-         line-height: 59px;
+         line-height: calc(59/48);
       }
 
-      @media screen and (min-width:320px) and (max-width:479px) {
-         font-size: 32px;
-         line-height: 39px;
-      }
+   
 
 
       &:hover,
@@ -278,16 +269,14 @@ button {
    }
 
    &__button-buy {
-      @media screen and (min-width:320px) and (max-width:479px) {
          width: 152px;
          height: 42px;
          border-radius: 10px;
          background-color: #F8D24E;
-         font-size: 14px;
          font-weight: 600;
-         line-height: 17px;
-         position: absolute;
-         bottom: 64px;
+         line-height: calc(17/14);
+         // position: absolute;
+         // bottom: 64px;
 
          &:hover {
             background-color: #0A8817;
@@ -302,9 +291,9 @@ button {
             background-color: #ABABAB;
          }
 
-      }
+      
 
-      @media screen and (min-width:480px) and (max-width:768px) {
+      @media screen and (min-width:$tablet) {
          display: none;
       }
    }
