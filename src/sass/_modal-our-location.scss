@@ -44,7 +44,8 @@
 
     .backdrop-location.is-hidden & {
 
-        transform: translate(-50%, -50%) scale(1.1) skew(30deg);
+        // transform: translate(-50%, -50%) scale(1.1) skew(30deg);
+        transform: translate(-50%, -50%) scale(1.1);
         opacity: 0;
     
         

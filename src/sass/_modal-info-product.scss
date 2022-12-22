@@ -10,7 +10,8 @@
 .modal-info__ingredients{
     z-index: 100;
     position: absolute;
-    top: 75%;
+    // top: 75%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 280px;
@@ -53,6 +54,11 @@
 }
 .ingredients{
     margin-bottom: 40px;
+
+ @media screen and (min-width:768px){
+    margin-bottom: 48px;
+ }
+
 }
 .ingredients__title{
     font-family: $secondaryFont;
@@ -170,7 +176,11 @@
     flex-direction: column;
 }
 .ingredients-form > div {
-    margin-bottom: 42px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+    }
 }
 .ingredients-form__field {
     display: block;

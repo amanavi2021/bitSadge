@@ -299,4 +299,15 @@
 
   background: transparent;
   border: none;
+
+  transition: color 250ms $timingFunction;
+
+  &:hover,
+  &:focus {
+         color: $mainColor;
+      }
+}
+
+.products__icon {
+  fill:currentColor;
 }
