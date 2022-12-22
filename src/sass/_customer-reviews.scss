@@ -4,17 +4,17 @@
 
     @media screen and (max-width: calc($tablet - 0.02px)) {
       max-width: 480px;
-      padding-bottom: 393px; 
+      padding-bottom: 40px; 
     }
   
     @media screen and (min-width: $tablet) {
       width: 768px;
-      padding: 0 12px 379px 12px;
+      padding: 0 12px 80px 12px;
     }
   
     @media screen and (min-width: $desktop) {
       width: 1200px;
-      padding: 0 94px 135px 93px;
+      padding: 0 94px 100px 93px;
     }
     
 }
