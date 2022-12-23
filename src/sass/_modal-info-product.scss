@@ -10,8 +10,8 @@
 .modal-info__ingredients{
     z-index: 100;
     position: absolute;
-    // top: 75%;
-    top: 50%;
+    top: 75%;
+    // top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 280px;
@@ -29,6 +29,7 @@
     }
     @media screen and (min-width: 768px){
             width: 568px;
+            top: 50%;
     }
 }
 .modal-info__ingredients--close-btn{
